@@ -1,9 +1,13 @@
-import HeroVideo from './components/HeroVideo';
+import Header from './components/Header';
+import HeroLawhere from './components/HeroLawhere';
 
 export default function App() {
   return (
     <>
-      <HeroVideo />
+      <Header />
+      <div className="pt-20"> {/* espacio por el header fijo */}
+        <HeroLawhere />
+      </div>
     </>
   );
 }
