@@ -3,6 +3,9 @@ import HeroLawhere from './components/HeroLawhere';
 import ServicesShowcase from './components/ServicesShowcase';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
+import Products from './components/Products';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
@@ -13,7 +16,9 @@ export default function App() {
         <ServicesShowcase />
         <WhyChooseUs />
         <Testimonials />
-        {/* Aquí luego agregaremos Productos y Contacto */}
+        <Products />
+        <Contact />
+        <Footer />
       </main>
     </>
   );
