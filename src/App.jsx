@@ -1,19 +1,9 @@
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
-import CTASection from './components/CTASection';
-import Footer from './components/Footer';
+import HeroVideo from './components/HeroVideo';
 
-function App() {
+export default function App() {
   return (
     <>
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <CTASection />
-      <Footer />
+      <HeroVideo />
     </>
   );
 }
-
-export default App;
