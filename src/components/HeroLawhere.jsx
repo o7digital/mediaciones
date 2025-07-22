@@ -1,64 +1,39 @@
+
 import React from 'react';
+import './HeroLawhere.css'; // Asegúrate de tener estilos adecuados
 
-export default function HeroLawhere() {
+const HeroLawhere = () => {
   return (
-    <section className="relative h-screen bg-black text-white overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute w-full h-full object-cover opacity-30"
-      >
-        <source src="/video/hero-bg.mp4" type="video/mp4" />
-        Tu navegador no soporta video.
+    <section className="hero-lawhere">
+      <video autoPlay muted loop className="hero-video">
+        <source src="/video/lawhero.mp4" type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
       </video>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between h-full">
-        {/* Columna izquierda */}
-        <div className="md:w-1/2 space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-            Expert Advice, <span className="text-yellow-400">Powerful</span> Legal <span className="text-yellow-400">Representation</span>
-          </h1>
-
-          <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-md">
-            <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-            <p className="text-sm text-gray-200">Habitant eleifend varius taciti mi semper fringilla vel morbi. Nisi blandit egestas cubilia lacus quis lectus viverra leo.</p>
+      <div className="hero-overlay">
+        <div className="hero-content">
+          <div className="hero-left">
+            <div className="box white-box">
+              <h3>Our Mission</h3>
+              <p>Brindar soluciones legales efectivas mediante la mediación y el acuerdo entre partes.</p>
+            </div>
+            <div className="box white-box">
+              <h3>Our Vision</h3>
+              <p>Convertirnos en referentes de la mediación legal accesible, empática y eficiente.</p>
+            </div>
           </div>
-
-          <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-md">
-            <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-            <p className="text-sm text-gray-200">Lectus auctor sodales suscipit, condimentum purus eu. Vulputate viverra egestas pharetra, montes phasellus porttitor nostra tellus.</p>
-          </div>
-        </div>
-
-        {/* Columna derecha */}
-        <div className="md:w-1/2 mt-10 md:mt-0 flex flex-col items-center">
-          <img
-            src="/img/lawyer-placeholder.png"
-            alt="Lawyer"
-            className="w-72 h-auto rounded-lg shadow-lg"
-          />
-          <div className="mt-6 grid grid-cols-2 gap-4 text-center">
-            <div>
-              <h2 className="text-3xl font-bold text-yellow-400">98 575+</h2>
-              <p className="text-sm">Courtroom Hours</p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-yellow-400">12K</h2>
-              <p className="text-sm">Satisfied Clients</p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-yellow-400">86%</h2>
-              <p className="text-sm">Successful Arbitration</p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold text-yellow-400">35+</h2>
-              <p className="text-sm">Years of Experience</p>
+          <div className="hero-right">
+            <img src="/img/lawyer.png" alt="Abogado" className="hero-lawyer" />
+            <div className="stats">
+              <div><strong>98 575+</strong><br />Courtroom Hours</div>
+              <div><strong>12K</strong><br />Satisfied Clients</div>
+              <div><strong>86%</strong><br />Successful Arbitration</div>
+              <div><strong>35+</strong><br />Years Of Experience</div>
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default HeroLawhere;
