@@ -1,23 +1,30 @@
-import React from 'react';
+// src/components/Header.jsx
+import './Header.css';
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-xl font-bold text-gray-800">
-          Mediaciones
+    <header className="header">
+      <div className="header-top">
+        <div className="social-icons">
+          <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="TikTok"><i className="fab fa-tiktok"></i></a>
         </div>
-
-        {/* Menu */}
-        <nav className="space-x-6 text-sm font-medium text-gray-700">
-          <a href="#home" className="hover:text-blue-600 transition">Home</a>
-          <a href="#about" className="hover:text-blue-600 transition">Quiénes somos</a>
-          <a href="#services" className="hover:text-blue-600 transition">Servicios</a>
-          <a href="#products" className="hover:text-blue-600 transition">Productos</a>
-          <a href="#contact" className="hover:text-blue-600 transition">Contacto</a>
-        </nav>
+        <div className="contact-info">
+          <span><i className="fas fa-phone-alt"></i> +00-123-456789</span>
+          <span><i className="fas fa-envelope"></i> info@mediaciones.com</span>
+        </div>
       </div>
+      <nav className="navbar">
+        <div className="logo">Mediaciones</div>
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#quienes">Quiénes somos</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
   );
 }
