@@ -1,11 +1,10 @@
-
 .hero-lawhere {
   position: relative;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #000;
+  font-family: 'Arial', sans-serif;
 }
 
 .hero-video {
@@ -15,59 +14,84 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
+  z-index: 1;
 }
 
 .hero-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
-  max-width: 1200px;
-  padding: 2rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.7); /* semitransparente */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  color: #fff;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .hero-content {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .hero-left {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 45%;
+  min-width: 280px;
+}
+
+.hero-box {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-right {
+  flex: 1;
   text-align: center;
-  max-width: 45%;
-}
-
-.white-box {
-  background-color: white;
-  color: #333;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  min-width: 280px;
 }
 
 .hero-lawyer {
-  max-width: 100%;
-  height: auto;
+  max-width: 300px;
+  width: 100%;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.hero-stats {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1rem;
-  font-size: 0.95rem;
-  color: white;
+}
+
+.stat {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat h4 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.stat p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
 }
