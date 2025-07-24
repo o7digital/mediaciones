@@ -1,34 +1,44 @@
-
-import React from 'react';
-import './HeroLawhere.css'; // Asegúrate de tener estilos adecuados
+import React from "react";
+import "./HeroLawhere.css";
 
 const HeroLawhere = () => {
   return (
     <section className="hero-lawhere">
-      <video autoPlay muted loop className="hero-video">
+      <video className="hero-video" autoPlay muted loop>
         <source src="/video/lawhero.mp4" type="video/mp4" />
-        Tu navegador no soporta videos HTML5.
+        Your browser does not support the video tag.
       </video>
+
       <div className="hero-overlay">
         <div className="hero-content">
           <div className="hero-left">
-            <div className="box white-box">
-              <h3>Our Mission</h3>
-              <p>Brindar soluciones legales efectivas mediante la mediación y el acuerdo entre partes.</p>
+            <div className="hero-box white-bg">
+              <h3>Misión</h3>
+              <p>Brindar soluciones legales efectivas a través de procesos de mediación profesionales, humanos y justos.</p>
             </div>
-            <div className="box white-box">
-              <h3>Our Vision</h3>
-              <p>Convertirnos en referentes de la mediación legal accesible, empática y eficiente.</p>
+            <div className="hero-box white-bg">
+              <h3>Visión</h3>
+              <p>Convertirnos en referentes en mediación legal en LATAM con ética, experiencia y compromiso.</p>
             </div>
           </div>
+
           <div className="hero-right">
-            <img src="/img/lawyer.png" alt="Abogado" className="hero-lawyer" />
-            <div className="stats">
-              <div><strong>98 575+</strong><br />Courtroom Hours</div>
-              <div><strong>12K</strong><br />Satisfied Clients</div>
-              <div><strong>86%</strong><br />Successful Arbitration</div>
-              <div><strong>35+</strong><br />Years Of Experience</div>
-            </div>
+            <img src="/img/lawyer.png" alt="Abogado Mediador" className="hero-lawyer" />
+          </div>
+        </div>
+
+        <div className="hero-stats">
+          <div className="stat">
+            <h4>+10 Años</h4>
+            <p>de experiencia</p>
+          </div>
+          <div className="stat">
+            <h4>+500</h4>
+            <p>clientes satisfechos</p>
+          </div>
+          <div className="stat">
+            <h4>98%</h4>
+            <p>casos exitosos</p>
           </div>
         </div>
       </div>
@@ -37,3 +47,4 @@ const HeroLawhere = () => {
 };
 
 export default HeroLawhere;
+
