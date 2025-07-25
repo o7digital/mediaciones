@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import HeroLawhere from './components/HeroLawhere';
+import Servicios from './components/Servicios';
 import ServicesShowcase from './components/ServicesShowcase';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
@@ -13,6 +14,7 @@ export default function App() {
       <Header />
       <main className="pt-20">
         <HeroLawhere />
+        <Servicios />
         <ServicesShowcase />
         <WhyChooseUs />
         <Testimonials />
