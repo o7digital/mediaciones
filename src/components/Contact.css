@@ -1,5 +1,5 @@
 .contact-section {
-  background: #0f0f0f;
+  background: #0A192F; /* Azul oscuro */
   color: white;
   padding: 4rem 2rem;
   text-align: center;
@@ -14,6 +14,7 @@
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  color: #1F7BD8;
 }
 
 .contact-subtitle {
@@ -42,7 +43,7 @@
 }
 
 .contact-button {
-  background: #b88c4f;
+  background: #1F7BD8;
   color: white;
   padding: 0.8rem 2rem;
   font-size: 1rem;
@@ -53,5 +54,5 @@
 }
 
 .contact-button:hover {
-  background: #d4a75f;
+  background: #1362b0;
 }
