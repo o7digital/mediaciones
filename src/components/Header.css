@@ -2,62 +2,62 @@
   position: absolute;
   top: 0;
   width: 100%;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
   background: transparent;
-  color: white;
   z-index: 10;
 }
 
-/* Redes sociales a la izquierda en horizontal */
-.social-icons {
+.header-left {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
-.social-icons a {
-  color: white;
+.social {
+  color: #fff;
   font-size: 1.2rem;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: #8b5e3c; /* Café */
+.social:hover {
+  color: #a1824a;
 }
 
-/* Logo */
 .logo {
   font-size: 1.5rem;
+  color: #fff;
   font-weight: bold;
+  margin-left: 1rem;
 }
 
-/* Menú principal en el centro */
 .nav-menu {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .nav-menu a {
+  color: #fff;
   text-decoration: none;
-  color: white;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .nav-menu a:hover {
-  color: #8b5e3c; /* Café */
+  color: #a1824a;
 }
 
-/* Contacto a la derecha */
-.contact-info {
-  display: flex;
-  flex-direction: column;
+.header-right .contact-box {
+  background: #fff;
+  border-left: 5px solid #a1824a;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
   text-align: right;
-  font-size: 0.9rem;
 }
 
-.contact-info span {
-  display: block;
+.contact-box p {
+  margin: 0;
+  color: #000;
+  font-size: 0.9rem;
 }
