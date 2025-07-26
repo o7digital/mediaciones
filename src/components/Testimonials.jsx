@@ -21,14 +21,20 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="testimonials-section" id="testimonios">
-      <h2 className="testimonials-title">Testimoniales</h2>
-      {testimonials.map((t, index) => (
-        <div key={index} className="testimonial-card">
-          <p className="testimonial-quote">“{t.quote}”</p>
-          <p className="testimonial-author">— {t.name}, {t.role}</p>
+    <section className="testimonials-section">
+      <div className="testimonials-container">
+        <h2 className="testimonials-title">Testimoniales</h2>
+        <div className="testimonials-grid">
+          {testimonials.map((t, index) => (
+            <div key={index} className="testimonial-card">
+              <p className="testimonial-quote">“{t.quote}”</p>
+              <div className="testimonial-author">
+                — <strong>{t.name}</strong>, {t.role}
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }
