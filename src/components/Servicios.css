@@ -1,5 +1,5 @@
 .servicios-section {
-  background-color: #0f0f0f;
+  background-color: #0A192F; /* Azul oscuro */
   color: white;
   text-align: center;
   padding: 4rem 2rem;
@@ -8,6 +8,7 @@
 .servicios-title {
   font-size: 2rem;
   margin-bottom: 2rem;
+  color: #1F7BD8;
 }
 
 .servicios-grid {
@@ -26,11 +27,13 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 180px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .servicio-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: #0A192F;
 }
 
 .servicio-card p {
@@ -40,7 +43,7 @@
 }
 
 .btn-ver-mas {
-  background: #8b5e3c;
+  background: #1F7BD8;
   color: white;
   border: none;
   padding: 0.5rem;
@@ -50,5 +53,5 @@
 }
 
 .btn-ver-mas:hover {
-  background: #6e482e;
+  background: #1362b0;
 }
