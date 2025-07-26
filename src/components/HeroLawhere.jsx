@@ -5,16 +5,13 @@ import { FaBullseye, FaEye } from 'react-icons/fa';
 export default function HeroLawhere() {
   return (
     <section className="hero-lawhere">
-      {/* Video de fondo */}
       <video className="hero-video" autoPlay muted loop>
         <source src="video/mediacion.mp4" type="video/mp4" />
-        Tu navegador no soporta el video.
       </video>
 
       <div className="hero-overlay">
         <div className="hero-content">
-          
-          {/* Columna izquierda */}
+          {/* Cuadros de la izquierda */}
           <div className="hero-left">
             <div className="hero-box">
               <h3>
@@ -24,7 +21,6 @@ export default function HeroLawhere() {
                 Brindar soluciones legales efectivas a través de la mediación y el diálogo.
               </p>
             </div>
-
             <div className="hero-box">
               <h3>
                 <FaEye className="icon" /> Nuestra Visión
@@ -35,26 +31,21 @@ export default function HeroLawhere() {
             </div>
           </div>
 
-          {/* Imagen central */}
-          <div className="hero-center">
-            <img src="img/mediator.jpg" alt="Mediador" className="hero-lawyer" />
-          </div>
-
-          {/* Columna derecha */}
+          {/* Cuadros de estadísticas a la derecha */}
           <div className="hero-right">
-            <div className="stat">
+            <div className="stat transparent">
               <h4>98 575+</h4>
               <p>Horas de Audiencia</p>
             </div>
-            <div className="stat">
+            <div className="stat transparent">
               <h4>12K</h4>
               <p>Clientes Satisfechos</p>
             </div>
-            <div className="stat">
+            <div className="stat transparent">
               <h4>86%</h4>
               <p>Arbitrajes Exitosos</p>
             </div>
-            <div className="stat">
+            <div className="stat transparent">
               <h4>35+</h4>
               <p>Años de Experiencia</p>
             </div>
