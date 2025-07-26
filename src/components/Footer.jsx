@@ -4,18 +4,40 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        <p>
-          <strong>Correo:</strong> mediacionlegalprivada@gmail.com
-        </p>
-        <p>
-          <strong>Teléfono:</strong> 55 46 16 77 98
-        </p>
-        <p>
-          <strong>Dirección:</strong> Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX.
-        </p>
+      <div className="footer-container">
+        {/* Columna izquierda */}
+        <div className="footer-info">
+          <h3>Mediaciones</h3>
+          <p>
+            Soluciones legales efectivas a través de mediación privada certificada,
+            reduciendo tiempos, costos y preservando relaciones.
+          </p>
+        </div>
+
+        {/* Columna central */}
+        <div className="footer-links">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+
+        {/* Columna derecha */}
+        <div className="footer-contact">
+          <h4>Contacto</h4>
+          <p>Tel: +52 55 4616 7798</p>
+          <p>Email: info@mediaciones.com</p>
+          <p>Río Pánuco 43, Col. Renacimiento, CDMX</p>
+        </div>
       </div>
-      <p className="footer-copy">© 2024 Mediaciones. Todos los derechos reservados.</p>
+
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Mediaciones. Todos los derechos reservados.</p>
+      </div>
     </footer>
   );
 }
