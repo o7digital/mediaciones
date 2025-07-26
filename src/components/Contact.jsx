@@ -1,19 +1,26 @@
 import React from 'react';
+import './Contact.css';
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 bg-gray-100 text-gray-800">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-8">Contáctanos</h2>
-        <form className="space-y-6 text-left">
-          <input type="text" placeholder="Nombre" className="w-full p-3 rounded border" />
-          <input type="email" placeholder="Correo electrónico" className="w-full p-3 rounded border" />
-          <textarea rows="5" placeholder="Mensaje" className="w-full p-3 rounded border" />
-          <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Enviar</button>
+    <section className="contact-section">
+      <div className="contact-container">
+        <h2 className="contact-title">Contáctanos</h2>
+        <p className="contact-subtitle">
+          Si tienes dudas o deseas agendar una mediación, llena el formulario y nos pondremos en contacto.
+        </p>
+        <form className="contact-form">
+          <div className="form-group">
+            <input type="text" placeholder="Nombre completo" required />
+          </div>
+          <div className="form-group">
+            <input type="email" placeholder="Correo electrónico" required />
+          </div>
+          <div className="form-group">
+            <textarea placeholder="Escribe tu mensaje aquí" rows="5" required></textarea>
+          </div>
+          <button type="submit" className="contact-button">Enviar mensaje</button>
         </form>
-        <div className="mt-8 text-sm text-gray-600">
-          También puedes escribirnos a <a href="mailto:contacto@mediaciones.mx" className="text-blue-600">contacto@mediaciones.mx</a>
-        </div>
       </div>
     </section>
   );
