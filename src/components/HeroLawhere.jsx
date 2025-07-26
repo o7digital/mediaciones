@@ -1,44 +1,36 @@
 import React from 'react';
 import './HeroLawhere.css';
+import { FaBullseye, FaEye } from 'react-icons/fa';
 
 export default function HeroLawhere() {
   return (
     <section className="hero-lawhere">
       {/* Video de fondo */}
-      <video className="hero-video" autoPlay muted loop>
+      <video autoPlay loop muted className="hero-video">
         <source src="video/mediacion.mp4" type="video/mp4" />
-        Tu navegador no soporta video.
       </video>
 
-      {/* Contenido sobre el video */}
+      {/* Contenido */}
       <div className="hero-overlay">
         <div className="hero-content">
-          {/* Columna izquierda */}
+          {/* Izquierda */}
           <div className="hero-left">
             <div className="hero-box">
-              <h3>Nuestra Misión</h3>
-              <p>
-                Brindar soluciones legales efectivas a través de la mediación y el diálogo.
-              </p>
+              <h3><FaBullseye className="icon" /> Nuestra Misión</h3>
+              <p>Brindar soluciones legales efectivas a través de la mediación y el diálogo.</p>
             </div>
             <div className="hero-box">
-              <h3>Nuestra Visión</h3>
-              <p>
-                Ser líderes en mediación profesional con impacto humano y social.
-              </p>
+              <h3><FaEye className="icon" /> Nuestra Visión</h3>
+              <p>Ser líderes en mediación profesional con impacto humano y social.</p>
             </div>
           </div>
 
-          {/* Imagen en el centro */}
+          {/* Imagen centro */}
           <div className="hero-center">
-            <img
-              src="img/mediator.jpg"
-              alt="Mediador"
-              className="hero-lawyer"
-            />
+            <img src="img/mediator.jpg" alt="mediador" />
           </div>
 
-          {/* Columna derecha */}
+          {/* Derecha */}
           <div className="hero-right">
             <div className="stat">
               <h4>98 575+</h4>
