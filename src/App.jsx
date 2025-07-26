@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import HeroLawhere from './components/HeroLawhere';
+import QuienesSomos from './components/QuienesSomos';
 import Servicios from './components/Servicios';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -10,20 +11,20 @@ export default function App() {
     <>
       <Header />
       <main>
-        {/* Hero */}
+        {/* Hero principal */}
         <HeroLawhere />
 
-        {/* Fondo blanco desde aquí hacia abajo */}
+        {/* Nueva sección Quiénes Somos */}
+        <QuienesSomos />
+
+        {/* Fondo blanco desde servicios hasta contacto */}
         <div style={{ backgroundColor: '#ffffff' }}>
-          {/* Servicios */}
           <Servicios />
 
-          {/* Testimoniales */}
           <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
             <Testimonials />
           </div>
 
-          {/* Contacto */}
           <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
             <Contact />
           </div>
