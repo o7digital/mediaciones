@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import HeroLawhere from './components/HeroLawhere';
 import QuienesSomos from './components/QuienesSomos';
+import Mediacion from './components/Mediacion';
 import Servicios from './components/Servicios';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
@@ -14,10 +15,13 @@ export default function App() {
         {/* Hero principal */}
         <HeroLawhere />
 
-        {/* Nueva sección Quiénes Somos */}
+        {/* Sección Quiénes Somos */}
         <QuienesSomos />
 
-        {/* Fondo blanco desde servicios hasta contacto */}
+        {/* Sección La Mediación */}
+        <Mediacion />
+
+        {/* Fondo blanco desde aquí hacia abajo */}
         <div style={{ backgroundColor: '#ffffff' }}>
           <Servicios />
 
@@ -30,7 +34,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Footer con Aviso de Privacidad */}
         <Footer />
       </main>
     </>
