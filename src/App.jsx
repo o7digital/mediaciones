@@ -8,21 +8,23 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
+      {/* Header con menú y redes sociales */}
       <Header />
+
       <main className="pt-20">
-        {/* Sección Hero */}
+        {/* Hero con video de fondo y cuadros */}
         <HeroLawhere />
 
-        {/* Sección Servicios */}
+        {/* Servicios con tarjetas */}
         <Servicios />
 
         {/* Testimoniales */}
         <Testimonials />
 
-        {/* Formulario de Contacto */}
+        {/* Contacto con formulario */}
         <Contact />
 
-        {/* Footer */}
+        {/* Footer con datos de contacto */}
         <Footer />
       </main>
     </>
