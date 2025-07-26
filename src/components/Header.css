@@ -1,71 +1,72 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: transparent;
-  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 0.5rem 1rem;
 }
 
-.header-left {
+.header-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
 }
 
+/* Redes sociales a la izquierda */
 .social-icons {
   display: flex;
-  gap: 0.7rem;
+  gap: 1rem;
 }
 
 .social-icons a {
   color: #ffffff;
   font-size: 1.2rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #1F7BD8; /* Azul medio */
+  color: #007bff;
 }
 
-.logo {
-  font-size: 1.6rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin-left: 1rem;
-}
-
-.nav-menu {
+/* Menú central */
+.main-nav ul {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-menu a {
+.main-nav a {
   color: #ffffff;
   text-decoration: none;
+  font-size: 1rem;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-menu a:hover {
-  color: #1F7BD8;
+.main-nav a:hover {
+  color: #007bff;
 }
 
-.header-right .contact-box {
+/* Caja de contacto a la derecha */
+.contact-box {
   background: #ffffff;
-  border-left: 6px solid #1F7BD8; /* Borde azul */
+  color: #003366;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-align: right;
+  font-size: 0.85rem;
   min-width: 180px;
 }
 
 .contact-box p {
   margin: 0;
-  color: #0A192F;
-  font-size: 0.9rem;
-  font-weight: 500;
+  line-height: 1.2;
 }
