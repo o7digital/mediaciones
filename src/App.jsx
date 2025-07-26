@@ -1,7 +1,6 @@
 import Header from './components/Header';
 import HeroLawhere from './components/HeroLawhere';
 import Servicios from './components/Servicios';
-import ServicesShowcase from './components/ServicesShowcase';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Products from './components/Products';
@@ -13,13 +12,19 @@ export default function App() {
     <>
       <Header />
       <main className="pt-20">
+        {/* Hero principal */}
         <HeroLawhere />
+
+        {/* Sección de Servicios (ya con tarjetas blancas y ver más) */}
         <Servicios />
-        <ServicesShowcase />
-        <WhyChooseUs />
-        <Testimonials />
-        <Products />
-        <Contact />
+
+        {/* Si necesitas más secciones, descomenta las necesarias */}
+        {/* <WhyChooseUs /> */}
+        {/* <Testimonials /> */}
+        {/* <Products /> */}
+        {/* <Contact /> */}
+
+        {/* Footer con datos de contacto */}
         <Footer />
       </main>
     </>
