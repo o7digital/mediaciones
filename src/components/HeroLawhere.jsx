@@ -6,31 +6,41 @@ export default function HeroLawhere() {
   return (
     <section className="hero-lawhere">
       {/* Video de fondo */}
-      <video autoPlay loop muted className="hero-video">
+      <video className="hero-video" autoPlay muted loop>
         <source src="video/mediacion.mp4" type="video/mp4" />
+        Tu navegador no soporta el video.
       </video>
 
-      {/* Contenido */}
       <div className="hero-overlay">
         <div className="hero-content">
-          {/* Izquierda */}
+          
+          {/* Columna izquierda */}
           <div className="hero-left">
             <div className="hero-box">
-              <h3><FaBullseye className="icon" /> Nuestra Misión</h3>
-              <p>Brindar soluciones legales efectivas a través de la mediación y el diálogo.</p>
+              <h3>
+                <FaBullseye className="icon" /> Nuestra Misión
+              </h3>
+              <p>
+                Brindar soluciones legales efectivas a través de la mediación y el diálogo.
+              </p>
             </div>
+
             <div className="hero-box">
-              <h3><FaEye className="icon" /> Nuestra Visión</h3>
-              <p>Ser líderes en mediación profesional con impacto humano y social.</p>
+              <h3>
+                <FaEye className="icon" /> Nuestra Visión
+              </h3>
+              <p>
+                Ser líderes en mediación profesional con impacto humano y social.
+              </p>
             </div>
           </div>
 
-          {/* Imagen centro */}
+          {/* Imagen central */}
           <div className="hero-center">
-            <img src="img/mediator.jpg" alt="mediador" />
+            <img src="img/mediator.jpg" alt="Mediador" className="hero-lawyer" />
           </div>
 
-          {/* Derecha */}
+          {/* Columna derecha */}
           <div className="hero-right">
             <div className="stat">
               <h4>98 575+</h4>
