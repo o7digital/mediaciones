@@ -4,8 +4,6 @@
   height: 100vh;
   overflow: hidden;
   font-family: 'Arial', sans-serif;
-  color: #fff;
-  background: #000;
 }
 
 .hero-video {
@@ -23,9 +21,9 @@
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* oscurecer video */
+  background: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
   padding: 2rem;
   box-sizing: border-box;
@@ -33,44 +31,62 @@
 
 .hero-content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
   gap: 2rem;
 }
 
-.hero-left,
-.hero-right {
+.hero-left {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  min-width: 240px;
+  max-width: 250px;
 }
 
 .hero-box {
-  background: white;
-  color: #000;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
 }
 
-.hero-center {
+.hero-box h3 {
   display: flex;
-  justify-content: center;
   align-items: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-.hero-lawyer {
-  width: 280px;
-  height: auto;
-  border-radius: 8px;
+.hero-box .icon {
+  margin-right: 8px;
+  color: #8b5e3c; /* Café */
+}
+
+.hero-center img {
+  max-width: 200px;
+  border-radius: 6px;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .stat {
-  background: white;
-  color: #000;
-  text-align: center;
-  padding: 1rem;
-  border-radius: 8px;
+  background: transparent;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+.stat h4 {
+  color: #8b5e3c; /* Café */
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.stat p {
+  color: white;
+  font-size: 0.9rem;
+  margin: 0;
 }
