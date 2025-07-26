@@ -10,13 +10,13 @@ export default function App() {
     <>
       <Header />
       <main className="pt-20">
-        {/* Hero principal */}
+        {/* Sección Hero */}
         <HeroLawhere />
 
-        {/* Sección de Servicios */}
+        {/* Sección Servicios */}
         <Servicios />
 
-        {/* Sección de Testimoniales */}
+        {/* Testimoniales */}
         <Testimonials />
 
         {/* Formulario de Contacto */}
