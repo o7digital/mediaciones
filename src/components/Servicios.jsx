@@ -5,24 +5,28 @@ export default function Servicios() {
   const servicios = [
     {
       titulo: 'Mediación Familiar',
-      descripcion: 'Resolución de conflictos familiares con enfoque humano y profesional.'
+      descripcion:
+        'Resolución de conflictos familiares con enfoque humano y profesional.',
     },
     {
       titulo: 'Mediación Laboral',
-      descripcion: 'Soluciones efectivas para conflictos entre empleados y trabajadores.'
+      descripcion:
+        'Soluciones efectivas para conflictos entre empleados y empleadores.',
     },
     {
       titulo: 'Mediación Civil y Mercantil',
-      descripcion: 'Alternativas legales para conflictos civiles y comerciales.'
+      descripcion:
+        'Alternativas legales para conflictos civiles y comerciales.',
     },
     {
       titulo: 'Capacitación Legal',
-      descripcion: 'Cursos y talleres en resolución de conflictos y derecho colaborativo.'
-    }
+      descripcion:
+        'Cursos y talleres en resolución de conflictos y derecho colaborativo.',
+    },
   ];
 
   return (
-    <section className="servicios">
+    <section className="servicios" id="servicios">
       <h2>Nuestros Servicios</h2>
       <div className="servicios-grid">
         {servicios.map((servicio, index) => (
