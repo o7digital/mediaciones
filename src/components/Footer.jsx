@@ -4,9 +4,18 @@ import './Footer.css';
 export default function Footer() {
   return (
     <footer className="footer">
-      <p>Correo: mediacionlegalprivada@gmail.com | Teléfono: 55 46 16 77 98</p>
-      <p>Dirección: Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX.</p>
-      <p>&copy; 2025 Mediaciones. Todos los derechos reservados.</p>
+      <div className="footer-content">
+        <p>
+          <strong>Correo:</strong> mediacionlegalprivada@gmail.com
+        </p>
+        <p>
+          <strong>Teléfono:</strong> 55 46 16 77 98
+        </p>
+        <p>
+          <strong>Dirección:</strong> Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX.
+        </p>
+      </div>
+      <p className="footer-copy">© 2024 Mediaciones. Todos los derechos reservados.</p>
     </footer>
   );
 }
