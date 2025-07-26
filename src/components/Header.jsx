@@ -8,10 +8,17 @@ export default function Header() {
       <div className="header-left">
         {/* Redes sociales */}
         <div className="social-icons">
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaTiktok /></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <FaFacebook />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin />
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
+            <FaTiktok />
+          </a>
         </div>
+        {/* Logo */}
         <h1 className="logo">Mediaciones</h1>
       </div>
 
@@ -24,7 +31,7 @@ export default function Header() {
         <a href="#contacto">Contacto</a>
       </nav>
 
-      {/* Teléfono y correo */}
+      {/* Contacto a la derecha */}
       <div className="header-right">
         <div className="contact-info">
           <p>+00-123-456789</p>
