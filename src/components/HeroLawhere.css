@@ -7,7 +7,6 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Video de fondo */
 .hero-video {
   position: absolute;
   top: 0;
@@ -16,10 +15,9 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
-  filter: brightness(60%); /* oscurecer el video para mejor contraste */
+  filter: brightness(60%);
 }
 
-/* Capa de contenido sobre el video */
 .hero-overlay {
   position: relative;
   z-index: 2;
@@ -29,20 +27,16 @@
   flex-direction: column;
   justify-content: center;
   padding: 2rem;
-  box-sizing: border-box;
 }
 
-/* Contenido central (izquierda y derecha) */
 .hero-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-/* Columna izquierda - Misión y Visión */
 .hero-left {
   flex: 1;
   display: flex;
@@ -53,7 +47,7 @@
 
 .hero-box {
   padding: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.9); /* rectángulos blancos */
+  background-color: rgba(255, 255, 255, 0.9);
   color: #003366;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -62,15 +56,6 @@
 .hero-box h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hero-box h3::before {
-  content: "★"; /* Puedes cambiar el icono por una imagen o SVG */
-  font-size: 1.1rem;
-  color: #8b5e3c;
 }
 
 .hero-box p {
@@ -78,14 +63,12 @@
   color: #222;
 }
 
-/* Columna derecha - estadísticas */
 .hero-right {
   flex: 1;
   min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 1rem;
 }
 
 .hero-stats {
@@ -95,22 +78,22 @@
 }
 
 .stat {
-  background: rgba(255, 255, 255, 0.15); /* rectángulos transparentes */
+  background: rgba(255, 255, 255, 0.15);
   padding: 1rem 1.5rem;
   border-radius: 8px;
   text-align: center;
-  min-width: 160px;
+  min-width: 180px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .stat h4 {
   margin: 0;
   font-size: 1.8rem;
-  color: #8b5e3c; /* números en café */
+  color: #8b5e3c;
 }
 
 .stat p {
   margin: 0;
   font-size: 1rem;
-  color: #ffffff; /* texto en blanco */
+  color: #ffffff;
 }
