@@ -1,47 +1,55 @@
-import React from 'react';
-import './HeroLawhere.css';
+import React from "react";
+import "./HeroLawhere.css";
 
 export default function HeroLawhere() {
   return (
-    <section id="home" className="hero-lawhere">
-      <video className="hero-video" autoPlay loop muted>
+    <section className="hero-lawhere">
+      {/* Video de fondo */}
+      <video className="hero-video" autoPlay muted loop>
         <source src="video/mediacion.mp4" type="video/mp4" />
         Tu navegador no soporta videos.
       </video>
 
+      {/* Contenido sobre el video */}
       <div className="hero-overlay">
         <div className="hero-content">
+          {/* Izquierda */}
           <div className="hero-left">
             <div className="hero-box">
               <h3>Nuestra Misión</h3>
               <p>
-                Promover soluciones justas y efectivas mediante procesos de mediación 
-                que fortalezcan las relaciones humanas y profesionales.
+                Promover soluciones justas y efectivas mediante procesos de
+                mediación que fortalezcan las relaciones humanas y profesionales.
               </p>
             </div>
+
             <div className="hero-box">
               <h3>Nuestra Visión</h3>
               <p>
-                Ser líderes en mediación legal privada, garantizando confianza, 
+                Ser líderes en mediación legal privada, garantizando confianza,
                 transparencia y acuerdos sostenibles.
               </p>
             </div>
           </div>
 
+          {/* Derecha */}
           <div className="hero-right">
-            {/* Rectángulos de estadísticas o información */}
             <div className="hero-stats">
               <div className="stat">
-                <h4>95%</h4>
-                <p>Casos exitosos</p>
+                <h4>98 575+</h4>
+                <p>Horas de audiencia</p>
               </div>
               <div className="stat">
-                <h4>15+</h4>
+                <h4>12K</h4>
+                <p>Clientes satisfechos</p>
+              </div>
+              <div className="stat">
+                <h4>86%</h4>
+                <p>Arbitrajes exitosos</p>
+              </div>
+              <div className="stat">
+                <h4>35+</h4>
                 <p>Años de experiencia</p>
-              </div>
-              <div className="stat">
-                <h4>100%</h4>
-                <p>Confidencialidad</p>
               </div>
             </div>
           </div>
