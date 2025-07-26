@@ -1,7 +1,17 @@
 .footer {
-  background: #000;
+  background-color: #0f0f0f;
   color: white;
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
   font-size: 0.9rem;
+}
+
+.footer-copy {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #aaa;
 }
