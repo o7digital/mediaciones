@@ -8,23 +8,28 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
-      {/* Header con menú y redes sociales */}
       <Header />
-
-      <main className="pt-20">
-        {/* Hero con video de fondo y cuadros */}
+      <main>
+        {/* Hero */}
         <HeroLawhere />
 
-        {/* Servicios con tarjetas */}
-        <Servicios />
+        {/* Fondo blanco desde aquí hacia abajo */}
+        <div style={{ backgroundColor: '#ffffff' }}>
+          {/* Servicios */}
+          <Servicios />
 
-        {/* Testimoniales */}
-        <Testimonials />
+          {/* Testimoniales */}
+          <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
+            <Testimonials />
+          </div>
 
-        {/* Contacto con formulario */}
-        <Contact />
+          {/* Contacto */}
+          <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
+            <Contact />
+          </div>
+        </div>
 
-        {/* Footer con datos de contacto */}
+        {/* Footer con Aviso de Privacidad */}
         <Footer />
       </main>
     </>
