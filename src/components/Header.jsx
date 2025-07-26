@@ -5,13 +5,13 @@ import { FaFacebookF, FaLinkedinIn, FaTiktok } from 'react-icons/fa';
 export default function Header() {
   return (
     <header className="header">
+      {/* Redes sociales y logo */}
       <div className="header-left">
-        {/* Redes sociales */}
-        <a href="#" className="social"><FaFacebookF /></a>
-        <a href="#" className="social"><FaLinkedinIn /></a>
-        <a href="#" className="social"><FaTiktok /></a>
-
-        {/* Logo / Nombre */}
+        <div className="social-icons">
+          <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+          <a href="#" target="_blank" rel="noopener noreferrer"><FaTiktok /></a>
+        </div>
         <h1 className="logo">Mediaciones</h1>
       </div>
 
@@ -27,7 +27,7 @@ export default function Header() {
       {/* Teléfono y correo */}
       <div className="header-right">
         <div className="contact-box">
-          <p className="phone">+00-123-456789</p>
+          <p className="phone">+52 55 4616 7798</p>
           <p className="email">info@mediaciones.com</p>
         </div>
       </div>
