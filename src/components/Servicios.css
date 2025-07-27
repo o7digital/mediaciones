@@ -1,6 +1,6 @@
 .servicios-section {
-  background-color: #0A192F; /* Azul oscuro */
-  color: white;
+  background-color: #ffffff;
+  color: #000;
   text-align: center;
   padding: 4rem 2rem;
 }
@@ -8,7 +8,6 @@
 .servicios-title {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #1F7BD8;
 }
 
 .servicios-grid {
@@ -19,31 +18,24 @@
 
 .servicio-card {
   background: white;
-  color: black;
+  border: 1px solid #ccc;
   border-radius: 8px;
   padding: 1.5rem;
   text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 180px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .servicio-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #0A192F;
 }
 
 .servicio-card p {
-  flex: 1;
   font-size: 0.95rem;
   margin-bottom: 1rem;
 }
 
 .btn-ver-mas {
-  background: #1F7BD8;
+  background: #004aad;
   color: white;
   border: none;
   padding: 0.5rem;
@@ -53,5 +45,5 @@
 }
 
 .btn-ver-mas:hover {
-  background: #1362b0;
+  background: #00327a;
 }
