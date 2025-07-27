@@ -7,6 +7,7 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-black bg-opacity-80 text-white z-50 shadow-md">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+        
         {/* Redes sociales */}
         <div className="flex space-x-4">
           <a href="#" aria-label="Facebook" className="hover:text-blue-500">
@@ -33,31 +34,6 @@ export default function Header() {
         </nav>
 
         {/* Teléfono y correo */}
-        <div className="hidden md:block bg-white text-black px-3 py-1 rounded text-sm">
+        <div className="hidden md:block bg-white text-black px-3 py-1 rounded text-sm text-right">
           <p>Tel: +52 55 4616 7798</p>
-          <p className="text-blue-600">info@mediaciones.com</p>
-        </div>
-
-        {/* Botón de menú móvil */}
-        <button 
-          className="md:hidden" 
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Abrir menú"
-        >
-          ☰
-        </button>
-      </div>
-
-      {/* Menú móvil */}
-      {menuOpen && (
-        <div className="md:hidden bg-black bg-opacity-95 text-center py-4 space-y-4">
-          <a href="#home" className="block hover:text-blue-400">Home</a>
-          <a href="#quienes-somos" className="block hover:text-blue-400">Quiénes Somos</a>
-          <a href="#mediacion" className="block hover:text-blue-400">La Mediación</a>
-          <a href="#servicios" className="block hover:text-blue-400">Servicios</a>
-          <a href="#contacto" className="block hover:text-blue-400">Contacto</a>
-        </div>
-      )}
-    </header>
-  );
-}
+          <p
