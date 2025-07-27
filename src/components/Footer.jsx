@@ -5,28 +5,28 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* Columna 1 */}
+        {/* Columna izquierda */}
         <div className="footer-col">
-          <h3 className="footer-logo">Mediaciones</h3>
+          <h3>Mediaciones</h3>
           <p>
             Soluciones legales efectivas a través de mediación privada certificada,
             reduciendo tiempos, costos y preservando relaciones.
           </p>
         </div>
 
-        {/* Columna 2 */}
+        {/* Columna central */}
         <div className="footer-col">
           <h4>Enlaces</h4>
           <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#quienes">Quiénes somos</a></li>
+            <li><a href="#quienes-somos">Quiénes somos</a></li>
+            <li><a href="#mediacion">La Mediación</a></li>
             <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#productos">Productos</a></li>
             <li><a href="#contacto">Contacto</a></li>
           </ul>
         </div>
 
-        {/* Columna 3 */}
+        {/* Columna derecha */}
         <div className="footer-col">
           <h4>Contacto</h4>
           <p>Tel: +52 55 4616 7798</p>
@@ -35,10 +35,9 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Barra inferior */}
       <div className="footer-bottom">
         <p>© 2025 Mediaciones. Todos los derechos reservados. 
-          <a href="/aviso-privacidad" className="aviso-link"> Aviso de Privacidad</a>
+          <a href="#aviso-privacidad"> Aviso de Privacidad</a>
         </p>
       </div>
     </footer>
