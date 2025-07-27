@@ -1,7 +1,7 @@
 .mediacion-section {
-  background-color: #ffffff;
-  color: #0f0f0f;
-  padding: 4rem 2rem;
+  background: #fff;
+  color: #333;
+  padding: 4rem 1rem;
 }
 
 .mediacion-container {
@@ -10,33 +10,40 @@
 }
 
 .mediacion-title {
-  font-size: 2.5rem;
-  color: #003366;
   text-align: center;
+  color: #003366;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.mediacion-container h3 {
-  font-size: 1.6rem;
-  color: #003366;
-  margin-top: 2rem;
+.mediacion-container p {
   margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-.mediacion-container p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-  color: #333;
+.mediacion-container h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #003366;
 }
 
 .mediacion-container ul {
-  margin-top: 1rem;
-  margin-left: 1.5rem;
   list-style: disc;
+  padding-left: 1.5rem;
 }
 
-.mediacion-container li {
-  margin-bottom: 0.8rem;
-  color: #333;
+.mediacion-container ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .mediacion-title {
+    font-size: 1.6rem;
+  }
+
+  .mediacion-container {
+    padding: 0 0.5rem;
+  }
 }
