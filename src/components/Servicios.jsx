@@ -1,3 +1,4 @@
+import React from 'react';
 import './Servicios.css';
 
 export default function Servicios() {
@@ -8,7 +9,7 @@ export default function Servicios() {
     },
     {
       titulo: 'Áreas Civil y Mercantil',
-      desc: 'Conflictos contractuales, comerciales, etc.',
+      desc: 'Conflictos contractuales, comerciales, entre otros.',
     },
     {
       titulo: 'Áreas Bancario y Financiero',
@@ -29,16 +30,18 @@ export default function Servicios() {
   ];
 
   return (
-    <section className="servicios-section" id="servicios">
-      <h2 className="servicios-title">Nuestros Servicios</h2>
-      <div className="servicios-grid">
-        {servicios.map((servicio, index) => (
-          <div className="servicio-card" key={index}>
-            <h3>{servicio.titulo}</h3>
-            <p>{servicio.desc}</p>
-            <button className="btn-ver-mas">Ver más</button>
-          </div>
-        ))}
+    <section id="servicios" className="servicios-section">
+      <div className="servicios-container">
+        <h2 className="servicios-title">Nuestros Servicios</h2>
+        <div className="servicios-grid">
+          {servicios.map((servicio, index) => (
+            <div className="servicio-card" key={index}>
+              <h3>{servicio.titulo}</h3>
+              <p>{servicio.desc}</p>
+              <button className="btn-ver-mas">Ver más</button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
