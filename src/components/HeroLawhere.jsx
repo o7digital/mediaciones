@@ -3,7 +3,7 @@ import "./HeroLawhere.css";
 
 export default function HeroLawhere() {
   return (
-    <section className="hero-lawhere">
+    <section className="hero-lawhere" id="home">
       {/* Video de fondo */}
       <video className="hero-video" autoPlay muted loop>
         <source src="video/mediacion.mp4" type="video/mp4" />
