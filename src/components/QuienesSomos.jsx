@@ -12,7 +12,6 @@ export default function QuienesSomos() {
       </p>
 
       <div className="quienes-somos-grid">
-        {/* Tarjeta Emma Patricia */}
         <div className="quienes-somos-card">
           <h3>Emma Patricia Solís Cámara Cano</h3>
           <p>
@@ -24,7 +23,6 @@ export default function QuienesSomos() {
           </p>
         </div>
 
-        {/* Foto María del Pilar */}
         <div className="quienes-somos-foto">
           <img src="/img/maria-del-pilar.jpg" alt="María del Pilar Carrizosa Celis" />
         </div>
