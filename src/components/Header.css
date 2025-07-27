@@ -1,93 +1,72 @@
-/* Header.css */
-
 .header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(10, 60, 125, 0.9); /* Azul con transparencia */
-  color: white;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 0.5rem 1rem;
 }
 
 .header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
 }
 
-.logo a {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav {
+/* Redes sociales a la izquierda */
+.social-icons {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.nav a {
-  color: white;
+.social-icons a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Menú central */
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.nav a:hover {
-  color: #cfd9ff;
+.main-nav a:hover {
+  color: #007bff;
 }
 
-/* 🔹 Botón hamburguesa (oculto en desktop) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
+/* Caja de contacto a la derecha */
+.contact-box {
+  background: #ffffff;
+  color: #003366;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-align: right;
+  font-size: 0.85rem;
+  min-width: 180px;
 }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-  transition: 0.3s;
-}
-
-/* 🔹 Responsive */
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: rgba(10, 60, 125, 0.95);
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    display: none;
-    width: 100%;
-  }
-
-  .nav.open {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-
-  .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
+.contact-box p {
+  margin: 0;
+  line-height: 1.2;
 }

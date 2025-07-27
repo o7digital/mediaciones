@@ -1,32 +1,38 @@
+import React from 'react';
 import './Servicios.css';
 
 export default function Servicios() {
   const servicios = [
     {
-      titulo: 'Mediación Privada Certificada',
-      descripcion:
-        'Acuerdos con validez legal y fuerza de cosa juzgada, fortaleciendo relaciones a mediano y largo plazo.',
+      titulo: 'Civil y Mercantil',
+      descripcion: 'Conflictos contractuales, comerciales y de propiedad.',
     },
     {
-      titulo: 'Áreas Civil y Mercantil',
-      descripcion:
-        'Conflictos contractuales y comerciales resueltos de manera eficiente y confidencial.',
+      titulo: 'Bancario y Financiero',
+      descripcion: 'Reestructuración de deudas y mediación hipotecaria.',
     },
     {
-      titulo: 'Áreas Bancario y Financiero',
-      descripcion:
-        'Mediación hipotecaria y reestructuración de deudas evitando procesos judiciales largos.',
+      titulo: 'Familiar y Comunitario',
+      descripcion: 'Conflictos familiares o sociales buscando preservar relaciones.',
     },
     {
-      titulo: 'Áreas Administrativo y Amparo',
-      descripcion:
-        'Disputas con entidades públicas resueltas de forma pacífica y con base legal.',
+      titulo: 'Corporativo',
+      descripcion: 'Prevención de conflictos en empresas y cumplimiento normativo.',
     },
-    {
-      titulo: 'Áreas Familiar y Comunitaria',
-      descripcion:
-        'Soluciones para conflictos familiares o sociales priorizando el bienestar de las partes.',
-    },
-    {
-      titulo: 'Áreas Corporativo y Cumplimiento Normativo',
-      desc
+  ];
+
+  return (
+    <section className="servicios-section" id="servicios">
+      <h2 className="servicios-title">Nuestros Servicios</h2>
+      <div className="servicios-grid">
+        {servicios.map((s, index) => (
+          <div key={index} className="servicio-card">
+            <h3>{s.titulo}</h3>
+            <p>{s.descripcion}</p>
+            <button className="btn-ver-mas">Ver más</button>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
