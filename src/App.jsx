@@ -15,9 +15,9 @@ export default function App() {
         {/* Hero */}
         <HeroLawhere />
 
-        {/* Secciones con fondo blanco desde aquí */}
+        {/* Fondo blanco desde aquí hacia abajo */}
         <div style={{ backgroundColor: '#ffffff' }}>
-          {/* Quienes Somos */}
+          {/* Quiénes Somos */}
           <QuienesSomos />
 
           {/* La Mediación */}
@@ -26,14 +26,18 @@ export default function App() {
           {/* Servicios */}
           <Servicios />
 
-          {/* Testimonios */}
-          <Testimonials />
+          {/* Testimoniales */}
+          <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
+            <Testimonials />
+          </div>
 
           {/* Contacto */}
-          <Contact />
+          <div style={{ backgroundColor: '#ffffff', paddingBottom: '2rem' }}>
+            <Contact />
+          </div>
         </div>
 
-        {/* Footer */}
+        {/* Footer con Aviso de Privacidad */}
         <Footer />
       </main>
     </>
