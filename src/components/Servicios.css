@@ -1,0 +1,77 @@
+/* Servicios.css */
+
+.servicios-section {
+  background-color: #ffffff;
+  color: #222;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.servicios-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #0a3c7d;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.servicio-card {
+  background: white;
+  color: black;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 180px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.servicio-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #0a3c7d;
+}
+
+.servicio-card p {
+  flex: 1;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.btn-ver-mas {
+  background: #0a3c7d;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.btn-ver-mas:hover {
+  background: #082c5c;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .servicios-title {
+    font-size: 1.8rem;
+  }
+
+  .servicio-card {
+    padding: 1rem;
+  }
+
+  .btn-ver-mas {
+    font-size: 0.85rem;
+  }
+}
