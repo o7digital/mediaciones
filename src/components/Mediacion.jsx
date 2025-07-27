@@ -26,7 +26,7 @@ export default function Mediacion() {
           El conflicto es siempre visto como algo negativo, se define como el resultado disfuncional
           de la comunicación. La gente, los pueblos y sus comunidades lo han enfrentado
           indistintamente según los tiempos y circunstancias, encontrando en él soluciones al
-          mismo que bien manejadas a través de la escucha activa, el dialogo y la comunicación
+          mismo que bien manejadas a través de la escucha activa, el diálogo y la comunicación
           logran acuerdos que son creados por los interesados e inmersos en el conflicto,
           trascendiéndolo en oportunidades de crecimiento dejando así el estancamiento del
           problema y alejando el antagonismo.
@@ -42,7 +42,7 @@ export default function Mediacion() {
 
         <p>
           Un elemento importante de la mediación es la voluntariedad, la confidencialidad, la
-          neutralidad, la imparcialidad y la flexibilidad que se desarrolla en el proceso, el mediador
+          neutralidad, la imparcialidad y la flexibilidad que se desarrolla en el proceso. El mediador
           a través de estos elementos realizará la mediación procurando acuerdos que satisfagan y
           resuelvan el conflicto.
         </p>
