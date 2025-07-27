@@ -1,23 +1,30 @@
-import React from 'react';
 import './Servicios.css';
 
 export default function Servicios() {
   const servicios = [
     {
-      titulo: 'Civil y Mercantil',
-      descripcion: 'Conflictos contractuales, comerciales y de propiedad.',
+      titulo: 'Mediación Privada Certificada con Fe Pública',
+      desc: 'Acuerdos con validez legal y fuerza de cosa juzgada (vinculantes).',
     },
     {
-      titulo: 'Bancario y Financiero',
-      descripcion: 'Reestructuración de deudas y mediación hipotecaria.',
+      titulo: 'Áreas Civil y Mercantil',
+      desc: 'Conflictos contractuales, comerciales, etc.',
     },
     {
-      titulo: 'Familiar y Comunitario',
-      descripcion: 'Conflictos familiares o sociales buscando preservar relaciones.',
+      titulo: 'Áreas Bancario y Financiero',
+      desc: 'Reestructuración de deudas, mediación hipotecaria.',
     },
     {
-      titulo: 'Corporativo',
-      descripcion: 'Prevención de conflictos en empresas y cumplimiento normativo.',
+      titulo: 'Áreas Administrativo y Amparo',
+      desc: 'Disputas con entidades públicas.',
+    },
+    {
+      titulo: 'Áreas Familiar y Comunitaria',
+      desc: 'Conflictos familiares o sociales.',
+    },
+    {
+      titulo: 'Áreas Corporativo y Cumplimiento Normativo',
+      desc: 'Gobierno corporativo, prevención de conflictos en empresas.',
     },
   ];
 
@@ -25,10 +32,10 @@ export default function Servicios() {
     <section className="servicios-section" id="servicios">
       <h2 className="servicios-title">Nuestros Servicios</h2>
       <div className="servicios-grid">
-        {servicios.map((s, index) => (
-          <div key={index} className="servicio-card">
-            <h3>{s.titulo}</h3>
-            <p>{s.descripcion}</p>
+        {servicios.map((servicio, index) => (
+          <div className="servicio-card" key={index}>
+            <h3>{servicio.titulo}</h3>
+            <p>{servicio.desc}</p>
             <button className="btn-ver-mas">Ver más</button>
           </div>
         ))}
