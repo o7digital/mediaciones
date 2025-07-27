@@ -27,15 +27,32 @@ export default function Header() {
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
         </nav>
 
-        {/* Contacto desktop */}
+        {/* Teléfono y correo */}
         <div className="contact-info">
           <p>Tel: +52 55 4616 7798</p>
           <p className="email">info@mediaciones.com</p>
         </div>
 
-        {/* Botón hamburguesa */}
-        <button className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>☰</button>
+        {/* Botón menú móvil */}
+        <button 
+          className="hamburger" 
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
       </div>
+
+      {/* Menú móvil */}
+      {menuOpen && (
+        <div className="mobile-menu">
+          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+          <a href="#quienes-somos" onClick={() => setMenuOpen(false)}>Quiénes Somos</a>
+          <a href="#mediacion" onClick={() => setMenuOpen(false)}>La Mediación</a>
+          <a href="#servicios" onClick={() => setMenuOpen(false)}>Servicios</a>
+          <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
+        </div>
+      )}
     </header>
   );
 }
