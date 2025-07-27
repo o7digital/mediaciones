@@ -1,7 +1,7 @@
 .mediacion-section {
-  background: #fff;
-  color: #333;
-  padding: 4rem 1rem;
+  background: #ffffff;
+  color: #0f0f0f;
+  padding: 3rem 1rem;
 }
 
 .mediacion-container {
@@ -10,40 +10,42 @@
 }
 
 .mediacion-title {
-  text-align: center;
-  color: #003366;
   font-size: 2rem;
+  color: #003366;
+  text-align: center;
   margin-bottom: 2rem;
 }
 
-.mediacion-container p {
+.mediacion-section p {
   margin-bottom: 1rem;
   line-height: 1.6;
+  text-align: justify;
 }
 
-.mediacion-container h3 {
+.mediacion-section h3 {
+  font-size: 1.4rem;
+  color: #003366;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: #003366;
 }
 
-.mediacion-container ul {
+.mediacion-section ul {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
   list-style: disc;
-  padding-left: 1.5rem;
 }
 
-.mediacion-container ul li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+.mediacion-section li {
+  margin-bottom: 0.6rem;
 }
 
-/* Responsive */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .mediacion-title {
     font-size: 1.6rem;
   }
 
-  .mediacion-container {
-    padding: 0 0.5rem;
+  .mediacion-section h3 {
+    font-size: 1.2rem;
   }
 }
