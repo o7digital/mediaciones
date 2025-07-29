@@ -1,9 +1,10 @@
 .hero-lawhere {
   position: relative;
-  width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  color: #fff;
 }
 
 .hero-video {
@@ -13,53 +14,91 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 .hero-overlay {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .hero-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
   width: 100%;
-  padding: 2rem;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.hero-left,
-.hero-right {
-  flex: 1 1 300px;
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  min-width: 280px;
 }
 
 .hero-box {
-  background: white;
-  color: black;
-  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1rem 1.5rem;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-.hero-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+.hero-box h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.hero-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.hero-right {
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  flex: 1;
+  min-width: 280px;
 }
 
 .stat {
-  background: transparent;
-  border: 1px solid #fff;
-  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
   padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
   text-align: center;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.stat h4 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.stat p {
+  margin: 0.3rem 0 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    max-width: 100%;
+  }
 }
