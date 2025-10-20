@@ -6,8 +6,7 @@ export default function HeroLawhere() {
   // Gestion du changement de vidéo toutes les 10 secondes
   const videos = [
     "video/mediacion.mp4",
-    "video/mediacion2.mp4",
-    "video/mediation3.mp4"
+    "video/mediacion2.mp4"
   ];
   const [current, setCurrent] = useState(0);
   const currentVideo = videos[current];
