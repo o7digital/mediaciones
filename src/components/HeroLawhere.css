@@ -25,6 +25,21 @@
   box-sizing: border-box;
 }
 
+/* Imagen de fondo para móvil (oculta por defecto en desktop) */
+.hero-mobile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  display: none; /* visible solo en mobile */
+}
+
 .hero-content {
   display: flex;
   justify-content: space-between;
@@ -182,6 +197,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  /* Ajustes contenedor para evitar cortes en móvil */
+  .hero-lawhere {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible; /* permitir que el contenido crezca */
+  }
+
+  /* Quitar video en móvil y mostrar imagen */
+  .hero-video { display: none; }
+  .hero-mobile-image { display: block; }
+
   .hero-content {
     flex-direction: column;
     text-align: center;

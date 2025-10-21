@@ -44,6 +44,9 @@ export default function HeroLawhere() {
         Tu navegador no soporta videos.
       </video>
 
+      {/* Fondo móvil (imagen) */}
+      <div className="hero-mobile-image" aria-hidden="true" />
+
       {/* Contenido sobre el video */}
       <div className="hero-overlay">
         <div className="hero-content">
