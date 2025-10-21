@@ -5,6 +5,7 @@ export default function TestimonialsCarousel({ items = [] }) {
   const [index, setIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
   const total = items.length;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const compute = () => {
@@ -23,13 +24,35 @@ export default function TestimonialsCarousel({ items = [] }) {
   const maxIndex = Math.max(0, total - cardsPerView);
   const clampedIndex = useMemo(() => Math.min(index, maxIndex), [index, maxIndex]);
 
-  const prev = () => setIndex((i) => Math.max(0, i - 1));
-  const next = () => setIndex((i) => Math.min(maxIndex, i + 1));
+  const prev = () => setIndex((i) => (i <= 0 ? maxIndex : i - 1));
+  const next = () => setIndex((i) => (i >= maxIndex ? 0 : i + 1));
 
   const pages = Math.max(1, Math.ceil(total / cardsPerView));
   const activePage = Math.floor(clampedIndex / cardsPerView);
 
   const onDot = (p) => setIndex(Math.min(p * cardsPerView, maxIndex));
+
+  // Detectar móvil y auto-avanzar cada 10s solo en móvil
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const apply = () => setIsMobile(mq.matches);
+    apply();
+    const handler = (e) => setIsMobile(e.matches);
+    if (mq.addEventListener) mq.addEventListener('change', handler);
+    else mq.addListener(handler);
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', handler);
+      else mq.removeListener(handler);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isMobile || total === 0) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i >= maxIndex ? 0 : i + 1));
+    }, 10000);
+    return () => clearInterval(id);
+  }, [isMobile, maxIndex, total]);
 
   return (
     <div className="tst-carousel" role="region" aria-label="Carrusel de testimonios" style={{ ['--cards-per-view']: cardsPerView }}>
@@ -59,4 +82,3 @@ export default function TestimonialsCarousel({ items = [] }) {
     </div>
   );
 }
-

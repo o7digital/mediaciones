@@ -59,7 +59,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden; /* evitar desplazamiento lateral en móvil */
+  }
   .hero-overlay {
     padding: 1rem;
   }
@@ -71,6 +74,11 @@
   .stat h4 {
     font-size: 1.2rem;
   }
+}
+
+/* TABLET (iPad y tablets): bloquear overflow horizontal */
+@media (min-width: 768px) and (max-width: 1024px) {
+  html, body { overflow-x: hidden; }
 }
 
 /* QUIENES SOMOS */

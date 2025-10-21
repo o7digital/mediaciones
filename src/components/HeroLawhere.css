@@ -196,7 +196,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   /* Ajustes contenedor para evitar cortes en móvil */
   .hero-lawhere {
     height: auto;
@@ -217,6 +217,9 @@
   .hero-right {
     max-width: 100%;
   }
+  /* En móvil, mantener solo el rectángulo principal */
+  .hero-left .hero-vision-custom { display: none; }
+  .hero-right { display: none; }
   /* Annuler le décalage des blocs blancs sur mobile */
   .hero-left .hero-mission-custom,
   .hero-left .hero-vision-custom {
@@ -244,6 +247,48 @@
   .hero-right .stat p { font-size: 0.85rem; }
   /* Espace spécifique annulé sur mobile */
   .hero-right .stat:nth-child(3) { margin-top: 0; }
+}
+
+/* Tablet (iPad y tablets): 768px–1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Mantener el video en tablet, pero ajustar layout para evitar cortes */
+  .hero-lawhere {
+    height: auto;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .hero-overlay { padding: 1.5rem; }
+  .hero-content { gap: 1.5rem; }
+
+  /* Quitar desplazamientos agresivos en tablet */
+  .hero-left .hero-mission-custom,
+  .hero-left .hero-vision-custom {
+    margin-left: 0;
+    margin-top: 0;
+    transform: none;
+  }
+
+  .hero-mission-custom,
+  .hero-vision-custom { padding: 2rem; }
+
+  .hero-box p.hero-mission-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    line-height: 1.2;
+  }
+  .hero-box p.hero-vision-text {
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    line-height: 1.35;
+  }
+
+  /* Stats sin desplazamiento lateral para evitar scroll */
+  .hero-right .stat,
+  .hero-right .stat:nth-child(1),
+  .hero-right .stat:nth-child(2),
+  .hero-right .stat:nth-child(3),
+  .hero-right .stat:nth-child(4) {
+    transform: none;
+  }
 }
 
 /* Positionnement spécifique des stats (desktop) */

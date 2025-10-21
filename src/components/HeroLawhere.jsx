@@ -11,8 +11,24 @@ export default function HeroLawhere() {
   const videoRefs = [useRef(null), useRef(null)];
   const [current, setCurrent] = useState(0);
   const currentVideo = videos[current];
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Detecta mobile por media query y escucha cambios de tamaño
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const apply = () => setIsMobile(mq.matches);
+    apply();
+    const handler = (e) => setIsMobile(e.matches);
+    if (mq.addEventListener) mq.addEventListener('change', handler);
+    else mq.addListener(handler); // fallback
+    return () => {
+      if (mq.removeEventListener) mq.removeEventListener('change', handler);
+      else mq.removeListener(handler);
+    };
+  }, []);
 
   useEffect(() => {
+    if (isMobile) return; // no preloads ni intervalos en móvil
     // Précharge la prochaine vidéo
     const nextIndex = (current + 1) % videos.length;
     const link = document.createElement('link');
@@ -28,21 +44,23 @@ export default function HeroLawhere() {
       clearInterval(interval);
       document.head.removeChild(link);
     };
-  }, [current, videos]);
+  }, [current, videos, isMobile]);
 
   return (
     <section className="hero-lawhere" id="home">
-      {/* Video de fondo dynamique */}
-      <video
-        className="hero-video"
-        autoPlay
-        muted
-        loop
-        key={currentVideo}
-      >
-        <source src={currentVideo} type="video/mp4" />
-        Tu navegador no soporta videos.
-      </video>
+      {/* Video de fondo (solo desktop/tablet) */}
+      {!isMobile && (
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          key={currentVideo}
+        >
+          <source src={currentVideo} type="video/mp4" />
+          Tu navegador no soporta videos.
+        </video>
+      )}
 
       {/* Fondo móvil (imagen) */}
       <div className="hero-mobile-image" aria-hidden="true" />
@@ -57,7 +75,7 @@ export default function HeroLawhere() {
                 CONFIANZA LEGAL, SOLUCIONES REALES
               </p>
             </div>
-
+            {/* El segundo rectángulo se oculta en móvil por CSS */}
             <div className="hero-box hero-vision-custom">
               <p className="hero-vision-text">
                 Desde la mediación hasta el litigio, brindamos soluciones legales integrales en lo civil, mercantil, fiscal y migratorio.
