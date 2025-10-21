@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contacto</h4>
           <p>Tel: +52 55 4616 7798</p>
-          <p>Email: info@mediaciones.com</p>
+          <p>Email: info@sca.com</p>
           <p>Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX</p>
         </div>
       </div>

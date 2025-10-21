@@ -8,15 +8,15 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-container">
+        {/* Logo (antes de Facebook) */}
+        <h1 className="logo">SOLIS CAMARA Y ASOCIADOS</h1>
+
         {/* Redes sociales */}
         <div className="social-icons">
           <a href="#" aria-label="Facebook"><FaFacebookF /></a>
           <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
           <a href="#" aria-label="TikTok"><FaTiktok /></a>
         </div>
-
-        {/* Logo */}
-        <h1 className="logo">Mediaciones</h1>
 
         {/* Menú desktop */}
         <nav className={`nav ${menuOpen ? 'open' : ''}`}>
@@ -27,11 +27,7 @@ export default function Header() {
           <a href="#contacto" onClick={() => setMenuOpen(false)}>Contacto</a>
         </nav>
 
-        {/* Teléfono y correo */}
-        <div className="contact-info">
-          <p>Tel: +52 55 4616 7798</p>
-          <p className="email">info@mediaciones.com</p>
-        </div>
+        {/* Teléfono y correo eliminados por solicitud */}
 
         {/* Botón menú móvil */}
         <button 

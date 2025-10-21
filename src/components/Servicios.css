@@ -2,18 +2,20 @@
   background-color: #ffffff;
   color: #0f0f0f;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 4rem 1rem; /* igual margen lateral que Quienes Somos */
 }
 
 .servicios-container {
-  max-width: 1200px;
+  max-width: 100%; /* ancho completo para igualar el carrusel de Quienes Somos */
   margin: 0 auto;
 }
 
 .servicios-title {
-  font-size: 2rem;
+  font-size: 2.5rem; /* igual que Quienes Somos (+25%) */
   color: #003366;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .servicios-grid {
@@ -31,7 +33,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 200px;
+  min-height: 320px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -55,7 +57,12 @@
   padding: 0.5rem;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.63rem;
+  /* Mismo tamaño y centrado en las tarjetas */
+  width: 4cm;
+  display: inline-block;
+  text-align: center;
+  align-self: center;
 }
 
 .btn-ver-mas:hover {
@@ -65,7 +72,7 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .servicios-title {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 
   .servicio-card h3 {

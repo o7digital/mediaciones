@@ -1,0 +1,110 @@
+.svc-carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.svc-arrow {
+  background: #003366;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.svc-arrow:hover { opacity: 0.9; }
+.svc-arrow.left { left: 8px; }
+.svc-arrow.right { right: 8px; }
+
+.svc-viewport { overflow: hidden; width: 100%; }
+.svc-track {
+  display: flex;
+  width: 100%;
+  transition: transform 300ms ease;
+}
+.svc-card { flex: 0 0 calc((100% / var(--cards-per-view, 4)) + 4cm); padding: 0.75rem; box-sizing: border-box; }
+.svc-card-inner {
+  height: 100%;
+  background: #f4f4f4;
+  color: #0f0f0f;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: stretch;
+  min-height: 24rem;
+}
+
+.svc-info { display: flex; flex-direction: column; justify-content: space-between; text-align: left; }
+.svc-title { font-size: 2rem; margin: 0 0 0.75rem 0; color: #003366; }
+.svc-desc { flex: 1; font-size: 1.25rem; line-height: 1.85; color: #333; margin: 0 0 1rem 0; text-align: justify; }
+/* Botón del mismo tamaño que el nombre de los socios */
+.svc-card .btn-ver-mas {
+  font-size: 1.4rem;
+  padding: 0.6rem 0.9rem;
+  /* Mismo tamaño y centrado */
+  width: 4cm;
+  display: inline-block;
+  text-align: center;
+  align-self: center;
+}
+
+.svc-dots { text-align: center; margin-top: 0.75rem; }
+.svc-dot { width: 10px; height: 10px; border-radius: 50%; background: #cfd8e3; border: none; margin: 0 4px; cursor: pointer; }
+.svc-dot.active { background: #003366; }
+
+/* Modal de detalle */
+.svc-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+.svc-modal {
+  width: min(720px, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+  background: #fff;
+  color: #0f0f0f;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  padding: 1.25rem 1.25rem 1.5rem;
+  position: relative;
+}
+.svc-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #003366;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.svc-modal-title { margin: 0 0 0.75rem 0; color: #003366; font-size: 1.4rem; text-align: left; }
+.svc-modal-content { font-size: 1rem; line-height: 1.75; color: #333; text-align: justify; }
+
+@media (max-width: 768px) {
+  .svc-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
+  .svc-card-inner { min-height: 18rem; }
+  .svc-title { font-size: 1.6rem; text-align: center; }
+  .svc-desc { font-size: 1.1rem; text-align: justify; }
+  .svc-card .btn-ver-mas { font-size: 1.12rem; }
+  .svc-modal { width: 94vw; padding: 1rem; }
+  .svc-modal-title { font-size: 1.2rem; text-align: center; }
+}

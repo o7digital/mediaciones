@@ -2,7 +2,7 @@
   background: #0f1c2e; /* azul oscuro */
   color: white;
   padding: 2rem 1rem 1rem;
-  font-size: 0.9rem;
+  font-size: 1.125rem; /* +25% respecto a 0.9rem */
 }
 
 .footer-container {

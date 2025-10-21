@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css';
+import CookieConsent from './components/CookieConsent';
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Contact />
         <Footer />
       </main>
+      <CookieConsent />
     </>
   );
 }

@@ -5,15 +5,17 @@
 }
 
 .mediacion-container {
-  max-width: 1000px;
+  max-width: 1000px; /* base for mobile/tablet */
   margin: 0 auto;
 }
 
 .mediacion-title {
-  font-size: 2.6rem; /* titre plus gros */
+  font-size: 2.5rem; /* igual que Quienes Somos (+25%) */
   color: #003366;
   text-align: center;
   margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .mediacion-section p {
@@ -57,5 +59,12 @@
   .mediacion-section li {
     font-size: 1.1rem;
     line-height: 1.7;
+  }
+}
+
+/* Desktop-only wider container */
+@media (min-width: 1024px) {
+  .mediacion-container {
+    max-width: calc(1000px + 12cm);
   }
 }

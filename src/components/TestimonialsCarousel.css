@@ -1,0 +1,56 @@
+.tst-carousel { position: relative; width: 100%; margin: 0 auto; }
+
+.tst-arrow {
+  background: #003366;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.tst-arrow:hover { opacity: 0.9; }
+.tst-arrow.left { left: 8px; }
+.tst-arrow.right { right: 8px; }
+
+.tst-viewport { overflow: hidden; width: 100%; }
+.tst-track { display: flex; width: 100%; transition: transform 300ms ease; }
+.tst-card { flex: 0 0 calc(100% / var(--cards-per-view, 3)); padding: 0.75rem; box-sizing: border-box; }
+.tst-card-inner {
+  height: 100%;
+  background: #f4f4f4;
+  color: #0f0f0f;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 18rem;
+}
+
+/* Estrellas en azul corporativo (mismo del título) */
+.tst-stars { color: #003366; font-size: 1.4rem; letter-spacing: 2px; margin-bottom: 0.5rem; }
+
+/* Tamaños de texto igual que Nuestros Servicios */
+.tst-quote { flex: 1; font-size: 1.25rem; line-height: 1.85; color: #333; text-align: justify; margin: 0 0 1rem 0; }
+.tst-author { font-size: 1.1rem; color: #003366; }
+
+.tst-dots { text-align: center; margin-top: 0.75rem; }
+.tst-dot { width: 10px; height: 10px; border-radius: 50%; background: #cfd8e3; border: none; margin: 0 4px; cursor: pointer; }
+.tst-dot.active { background: #003366; }
+
+@media (max-width: 768px) {
+  .tst-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
+  .tst-quote { font-size: 1.1rem; line-height: 1.7; text-align: justify; }
+  .tst-author { font-size: 1rem; }
+}
+

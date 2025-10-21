@@ -7,7 +7,9 @@
 .quienes-somos-section h2 {
   color: #003366; /* Azul corporativo */
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 2.5rem; /* +25% */
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .quienes-somos-grid {
