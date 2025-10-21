@@ -1,0 +1,107 @@
+.assoc-carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.assoc-arrow {
+  background: #003366;
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.assoc-arrow:hover { opacity: 0.9; }
+.assoc-arrow.left { left: 8px; }
+.assoc-arrow.right { right: 8px; }
+
+.assoc-viewport { overflow: hidden; width: 100%; }
+.assoc-track {
+  display: flex;
+  width: 100%;
+  transition: transform 300ms ease;
+}
+.assoc-card {
+  flex: 0 0 calc(100% / var(--cards-per-view, 4));
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+.assoc-card-inner {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr; /* photo en haut, texte en bas */
+  grid-template-rows: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.assoc-photo { 
+  width: 100%;
+  /* Aumentar altura visible de la foto en ~2cm y recortar */
+  height: calc(220px + 2cm);
+  overflow: hidden;
+}
+.assoc-photo img {
+  width: 100%;
+  height: 100%;
+  max-height: none; /* usamos la altura del contenedor */
+  object-fit: cover; /* recorte limpio */
+  object-position: top; /* prioriza la parte superior (rostro) */
+  border-radius: 12px;
+  display: block;
+}
+
+.assoc-info { text-align: left; }
+.assoc-info {
+  /* Bajar el bloque de texto (nombre + bio) 3 cm para dar más espacio a la foto */
+  margin-top: calc(3cm - 0.9rem); /* restamos el gap existente (0.9rem) */
+}
+.assoc-name {
+  font-size: 2rem; /* titre plus gros */
+  color: #003366;
+  margin: 0 0 0.75rem 0;
+}
+.assoc-bio {
+  font-size: 1.25rem; /* texte plus gros */
+  line-height: 1.85;
+  text-align: justify; /* justifié */
+  color: #222;
+}
+
+.assoc-dots { text-align: center; margin-top: 0.75rem; }
+.assoc-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #cfd8e3;
+  border: none;
+  margin: 0 4px;
+  cursor: pointer;
+}
+.assoc-dot.active { background: #003366; }
+
+@media (max-width: 768px) {
+  .assoc-arrow { width: 36px; height: 36px; font-size: 1.2rem; }
+  .assoc-card-inner { grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
+  .assoc-info { text-align: center; }
+  .assoc-name { font-size: 1.6rem; }
+  .assoc-bio { font-size: 1.1rem; line-height: 1.7; text-align: justify; }
+  /* En móvil, reducimos el desplazamiento para no crear un hueco excesivo */
+  .assoc-info { margin-top: 1rem; }
+  /* Mantener proporción razonable en pantallas pequeñas */
+  .assoc-photo { height: calc(180px + 1.5cm); }
+}

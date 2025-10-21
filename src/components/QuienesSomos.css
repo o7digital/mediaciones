@@ -28,9 +28,17 @@
 }
 
 .quienes-somos-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 2rem; /* nom plus grand */
+  font-weight: 700;
+  margin-bottom: 0.75rem;
   color: #003366; /* Azul corporativo */
+}
+
+/* Texte plus grand et justifié */
+.quienes-somos-card p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .quienes-somos-foto img {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./HeroLawhere.css";
 
 export default function HeroLawhere() {
@@ -8,15 +8,27 @@ export default function HeroLawhere() {
     "video/mediacion.mp4",
     "video/mediacion2.mp4"
   ];
+  const videoRefs = [useRef(null), useRef(null)];
   const [current, setCurrent] = useState(0);
   const currentVideo = videos[current];
 
   useEffect(() => {
+    // Précharge la prochaine vidéo
+    const nextIndex = (current + 1) % videos.length;
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'video';
+    link.href = videos[nextIndex];
+    document.head.appendChild(link);
+
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % videos.length);
     }, 10000);
-    return () => clearInterval(interval);
-  }, [videos.length]);
+    return () => {
+      clearInterval(interval);
+      document.head.removeChild(link);
+    };
+  }, [current, videos]);
 
   return (
     <section className="hero-lawhere" id="home">
@@ -37,19 +49,15 @@ export default function HeroLawhere() {
         <div className="hero-content">
           {/* Izquierda */}
           <div className="hero-left">
-            <div className="hero-box">
-              <h3>Nuestra Misión</h3>
-              <p>
-                Promover soluciones justas y efectivas mediante procesos de
-                mediación que fortalezcan las relaciones humanas y profesionales.
+            <div className="hero-box hero-mission-custom">
+              <p className="hero-mission-title">
+                CONFIANZA LEGAL, SOLUCIONES REALES
               </p>
             </div>
 
-            <div className="hero-box">
-              <h3>Nuestra Visión</h3>
-              <p>
-                Ser líderes en mediación legal privada, garantizando confianza,
-                transparencia y acuerdos sostenibles.
+            <div className="hero-box hero-vision-custom">
+              <p className="hero-vision-text">
+                Desde la mediación hasta el litigio, brindamos soluciones legales integrales en lo civil, mercantil, fiscal y migratorio.
               </p>
             </div>
           </div>
@@ -57,19 +65,19 @@ export default function HeroLawhere() {
           {/* Derecha */}
           <div className="hero-right">
             <div className="stat">
-              <h4>98 575+</h4>
+              <h4>1500+</h4>
               <p>Horas de audiencia</p>
             </div>
             <div className="stat">
-              <h4>12K</h4>
+              <h4>150</h4>
               <p>Clientes satisfechos</p>
             </div>
             <div className="stat">
-              <h4>86%</h4>
+              <h4>95%</h4>
               <p>Arbitrajes exitosos</p>
             </div>
             <div className="stat">
-              <h4>35+</h4>
+              <h4>+35</h4>
               <p>Años de experiencia</p>
             </div>
           </div>

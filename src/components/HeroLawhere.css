@@ -43,13 +43,80 @@
   min-width: 280px;
 }
 
+/* ...existing code... */
 .hero-box {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.hero-mission-custom {
+  background: rgba(255, 255, 255, 0.85); /* blanc semi-transparent */
+  border-radius: 1rem;
+  padding: 3rem; /* aumentar caja por texto más grande */
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+}
+.hero-mission-title {
+  color: #003366; /* color igual a Quienes Somos */
+  font-family: 'Arial', sans-serif; /* misma fuente */
+  font-size: 4rem; /* tamaño duplicado */
+  font-weight: bold;
+  text-transform: none; /* sin mayúsculas forzadas */
+  letter-spacing: normal; /* igual que títulos */
+  text-align: center;
+  line-height: 1.2;
+}
+.hero-vision-custom {
+  background: rgba(255, 255, 255, 0.85); /* blanc semi-transparent */
+  border-radius: 1rem;
+  padding: 3rem; /* aumentar caja por texto más grande */
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+}
+.hero-vision-text {
+  color: #003366; /* color igual a Quienes Somos */
+  font-family: 'Arial', sans-serif; /* misma fuente */
+  font-size: 4rem; /* tamaño duplicado */
+  font-weight: bold;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.2;
+}
+
+/* Empêcher l'étirement en largeur pour rendre le décalage visible */
+.hero-box { align-self: flex-start; }
+
+/* Déplacement vers la gauche des deux rectangles (≈3 cm) */
+.hero-left .hero-mission-custom,
+.hero-left .hero-vision-custom {
+  margin-left: -3cm;
+}
+
+/* Ajustement du 2e rectangle blanc (vision): 2cm plus à gauche, 5cm plus bas */
+.hero-left .hero-vision-custom {
+  margin-left: -5cm;
+  margin-top: 5cm;
+}
+
+/* Ajustement du 1er rectangle blanc (mission): 1cm plus à gauche, 5cm plus bas */
+.hero-left .hero-mission-custom {
+  margin-left: -4cm;
+  margin-top: 5cm; /* peut être ignoré selon le flux, on force avec transform */
+  transform: translateY(5cm);
+}
 .hero-box h3 {
   margin: 0 0 0.5rem;
   font-size: 1.2rem;
@@ -58,8 +125,24 @@
 
 .hero-box p {
   margin: 0;
-  font-size: 1rem;
   color: #333;
+}
+
+/* Priorité au style demandé (même que Quienes Somos) */
+.hero-box .hero-mission-title,
+.hero-box .hero-vision-text {
+  color: #003366;
+}
+/* Tamaños MUY grandes asegurados con mayor especificidad */
+.hero-box p.hero-mission-title {
+  /* Reducción adicional de ~30% */
+  font-size: clamp(1.54rem, 2.8vw, 2.45rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+.hero-box p.hero-vision-text {
+  font-size: clamp(1rem, 1.75vw, 1.7rem);
+  line-height: 1.35;
 }
 
 .hero-right {
@@ -71,23 +154,30 @@
 }
 
 .stat {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.25); /* opacité augmentée */
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   text-align: center;
-  color: #fff;
+  color: #003366; /* mismo color que el 2º cuadro blanco */
+  font-family: 'Arial', sans-serif; /* misma fuente */
   backdrop-filter: blur(4px);
+    transform: translateX(3cm);
 }
 
-.stat h4 {
-  margin: 0;
-  font-size: 1.3rem;
+/* 1er et 2e rectangles au même niveau (6 cm) */
+.hero-right .stat:nth-child(1),
+.hero-right .stat:nth-child(2) {
+  transform: translateX(6cm);
 }
 
+.stat h4,
 .stat p {
   margin: 0.3rem 0 0;
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.75vw, 1.7rem); /* mismo tamaño que .hero-vision-text */
+  line-height: 1.35;
+  font-weight: bold;
+  position: relative;
 }
 
 /* Responsive */
@@ -101,4 +191,41 @@
   .hero-right {
     max-width: 100%;
   }
+  /* Annuler le décalage des blocs blancs sur mobile */
+  .hero-left .hero-mission-custom,
+  .hero-left .hero-vision-custom {
+    margin-left: 0;
+  }
+
+  .hero-left .hero-vision-custom { margin-top: 0; }
+  .hero-left .hero-mission-custom { margin-top: 0; transform: none; }
+
+  /* Tipografías y caja ajustadas en móvil para evitar desbordes */
+  .hero-box p.hero-mission-title { font-size: 1.25rem; }
+  .hero-box p.hero-vision-text { font-size: 0.85rem; }
+  .hero-mission-custom,
+  .hero-vision-custom { padding: 1.75rem; }
+
+  /* Annuler aussi le décalage des stats sur mobile */
+  .hero-right .stat,
+  .hero-right .stat:nth-child(2),
+  .hero-right .stat:nth-child(3),
+  .hero-right .stat:nth-child(4) {
+    transform: none;
+  }
+  /* Igualar tamaño tipográfico al 2º cuadro blanco en móvil */
+  .hero-right .stat h4,
+  .hero-right .stat p { font-size: 0.85rem; }
+  /* Espace spécifique annulé sur mobile */
+  .hero-right .stat:nth-child(3) { margin-top: 0; }
+}
+
+/* Positionnement spécifique des stats (desktop) */
+.hero-right .stat:nth-child(3),
+.hero-right .stat:nth-child(4) {
+  transform: translateX(6cm);
+}
+/* Espace de 2cm entre le 2e et le 3e (en plus du gap de 1rem) */
+.hero-right .stat:nth-child(3) {
+  margin-top: calc(2cm - 1rem);
 }

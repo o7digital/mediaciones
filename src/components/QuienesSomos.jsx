@@ -1,4 +1,5 @@
 import './QuienesSomos.css';
+import AssociatesCarousel from './AssociatesCarousel';
 
 export default function QuienesSomos() {
   return (
@@ -11,24 +12,7 @@ export default function QuienesSomos() {
         de los procesos tradicionales.
       </p>
 
-      <div className="quienes-somos-grid">
-        {/* Tarjeta Emma Patricia */}
-        <div className="quienes-somos-card">
-          <h3>Emma Patricia Solís Cámara Cano</h3>
-          <p>
-            Licenciada en Derecho por la Universidad Iberoamericana, Maestría en Derechos Humanos (UIA) y diplomado en
-            Derecho Corporativo por el ITAM. Mediadora privada certificada (No. 122) por el Tribunal Superior de Justicia.
-            Experiencia en mediación comunitaria y corporativa con empresas como Grupo Minero de México, Banca Monex,
-            Bancomer y comunidades agrarias. Fue presidenta de la Asociación de Egresados de Derecho de la Universidad
-            Iberoamericana y miembro del Ilustre y Nacional Colegio de Abogados de México.
-          </p>
-        </div>
-
-        {/* Foto María del Pilar */}
-        <div className="quienes-somos-foto">
-          <img src="/img/maria-del-pilar.jpg" alt="María del Pilar Carrizosa Celis" />
-        </div>
-      </div>
+      <AssociatesCarousel />
     </section>
   );
 }
