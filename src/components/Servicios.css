@@ -40,9 +40,9 @@
   position: relative;
   padding-left: 1.25rem;
   margin-bottom: 0.5rem;
-  font-size: 1.05rem;
+  font-size: 1.365rem; /* +30% par rapport à 1.05rem */
   line-height: 1.6;
-  color: #0f0f0f;
+  color: #003366; /* même couleur que le titre */
 }
 
 .servicios-list li::before {
@@ -118,7 +118,7 @@
   }
 
   .servicios-list li {
-    font-size: 1rem;
+    font-size: 1.3rem; /* +30% par rapport à 1rem en mobile */
   }
 
   .servicio-card h3 {
