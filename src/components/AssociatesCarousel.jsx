@@ -73,14 +73,7 @@ export default function AssociatesCarousel() {
 
   const onDot = (p) => setIndex(Math.min(p * cardsPerView, maxIndex));
 
-  // Auto-avanzar cada 5s en todos los tamaños y volver al inicio al final
-  useEffect(() => {
-    if (total === 0) return;
-    const id = setInterval(() => {
-      setIndex((i) => (i >= maxIndex ? 0 : i + 1));
-    }, 5000);
-    return () => clearInterval(id);
-  }, [maxIndex, total]);
+  // Navegación manual únicamente (sin auto-avance)
 
   return (
     <div
