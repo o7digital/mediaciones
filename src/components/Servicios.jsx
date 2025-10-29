@@ -49,8 +49,45 @@ export default function Servicios() {
     },
     {
       titulo: 'Áreas Civil y Mercantil',
-      desc: 'Conflictos contractuales, comerciales, entre otros.',
-      detalles: 'Atendemos controversias civiles y mercantiles: incumplimientos de contrato, arrendamiento, cobros, daños y perjuicios, conflictos entre socios y proveedores, entre otros.',
+      desc: 'Conflictos contractuales y comerciales. Incumplimientos, disputas y arrendamientos.',
+      detalles: 'Atendemos controversias civiles y mercantiles con soluciones legales y consensuadas, evitando procesos judiciales largos y costosos.',
+      bullets: [
+        'Conflictos contractuales y comerciales.',
+        'Incumplimiento de acuerdos o pagos.',
+        'Disputas entre socios o proveedores.',
+        'Arrendamientos, compraventa y obligaciones civiles.',
+      ],
+      modal: (
+        <>
+          <p>
+            En esta área abordamos los conflictos derivados de relaciones civiles y comerciales, ofreciendo
+            soluciones legales y consensuadas que eviten procesos judiciales largos y costosos.
+          </p>
+          <p>Atendemos asuntos como:</p>
+          <ul>
+            <li>
+              Conflictos contractuales y comerciales, derivados de compraventas, prestación de servicios o distribución.
+            </li>
+            <li>
+              Incumplimiento de obligaciones o pagos, ofreciendo mecanismos de mediación para lograr acuerdos de pago o resarcimiento.
+            </li>
+            <li>
+              Disputas entre socios, proveedores o clientes, buscando restablecer la confianza y continuidad en las relaciones comerciales.
+            </li>
+            <li>
+              Arrendamientos, comodatos, préstamos y otras relaciones civiles, garantizando seguridad jurídica a ambas partes.
+            </li>
+          </ul>
+          <p>
+            Nuestra mediación en materia civil y mercantil promueve acuerdos rápidos, económicos y con validez legal,
+            generando certeza jurídica y evitando la saturación judicial.
+          </p>
+          <p>
+            El objetivo es que ambas partes obtengan una solución justa y equilibrada, preservando sus intereses y
+            relaciones comerciales a futuro.
+          </p>
+        </>
+      ),
     },
     {
       titulo: 'Áreas Bancario y Financiero',
