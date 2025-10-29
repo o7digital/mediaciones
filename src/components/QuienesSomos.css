@@ -20,6 +20,39 @@
   margin: 0 auto;
 }
 
+/* Texto general de la sección (fuera de tarjetas) */
+.quienes-somos-section p {
+  max-width: 1000px;
+  margin: 0 auto 1.1rem;
+  font-size: 1.25rem;
+  line-height: 1.85;
+  text-align: justify;
+  color: #222;
+}
+
+.quienes-somos-section h3 {
+  max-width: 1000px;
+  margin: 2rem auto 1rem;
+  font-size: 2rem;
+  color: #003366;
+  text-align: left;
+}
+
+.quienes-somos-section ul {
+  max-width: 1000px;
+  margin: 0 auto 1rem;
+  padding-left: 1.2rem;
+  list-style: disc;
+  text-align: justify;
+}
+
+.quienes-somos-section li {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #222;
+}
+
 .quienes-somos-card {
   background: #f8f8f8;
   border-radius: 8px;
@@ -56,5 +89,15 @@
   .quienes-somos-grid {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .quienes-somos-section p,
+  .quienes-somos-section li {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+
+  .quienes-somos-section h3 {
+    font-size: 1.6rem;
   }
 }
