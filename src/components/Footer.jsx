@@ -37,7 +37,7 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p>© 2025 Mediaciones. Todos los derechos reservados. 
-          <a href="#aviso-privacidad"> Aviso de Privacidad</a>
+          <a href="/aviso-privacidad.html" target="_blank" rel="noopener noreferrer"> Aviso de Privacidad</a>
         </p>
       </div>
     </footer>

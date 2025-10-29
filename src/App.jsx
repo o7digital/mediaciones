@@ -5,7 +5,6 @@ import Mediacion from './components/Mediacion';
 import Servicios from './components/Servicios';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
-import AvisoPrivacidad from './components/AvisoPrivacidad';
 import Footer from './components/Footer';
 import './index.css';
 import CookieConsent from './components/CookieConsent';
@@ -21,7 +20,6 @@ export default function App() {
         <Servicios />
         <Testimonials />
         <Contact />
-        <AvisoPrivacidad />
         <Footer />
       </main>
       <CookieConsent />
