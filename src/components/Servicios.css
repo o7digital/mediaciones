@@ -43,7 +43,8 @@
   font-size: 2rem; /* même taille que .svc-title */
   line-height: 1.3;
   color: #003366; /* même couleur que le titre */
-  font-weight: bold; /* correspond au h3 des cartes */
+  font-weight: 400; /* même poids que .svc-title (non bold) */
+  text-transform: none; /* pas de majuscules forcées */
 }
 
 .servicios-list li::before {
@@ -120,6 +121,7 @@
 
   .servicios-list li {
     font-size: 1.6rem; /* même taille mobile que .svc-title */
+    font-weight: 400;
   }
 
   .servicio-card h3 {
