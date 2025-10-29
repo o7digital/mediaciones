@@ -4,7 +4,7 @@ import './AssociatesCarousel.css';
 const associates = [
   {
     name: 'Emma Patricia Solís Cámara Cano',
-    photo: '/img/emma.jpg',
+    photo: '/img/Emma.jpeg',
     alt: 'Emma Patricia Solís Cámara Cano',
     bio:
       'Licenciada en Derecho por la Universidad Iberoamericana, Maestría en Derechos Humanos (UIA) y diplomado en Derecho Corporativo por el ITAM. Mediadora privada certificada (No. 122) por el Tribunal Superior de Justicia. Experiencia en mediación comunitaria y corporativa con empresas como Grupo Minero de México, Banca Monex, Bancomer y comunidades agrarias. Fue presidenta de la Asociación de Egresados de Derecho de la Universidad Iberoamericana y miembro del Ilustre y Nacional Colegio de Abogados de México.',

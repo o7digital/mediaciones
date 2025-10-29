@@ -67,6 +67,13 @@ export default function ServicesCarousel({ items = [] }) {
                 <div className="svc-info">
                   <h3 className="svc-title">{s.titulo}</h3>
                   <p className="svc-desc">{s.desc}</p>
+                  {Array.isArray(s.bullets) && s.bullets.length > 0 && (
+                    <ul className="svc-list">
+                      {s.bullets.map((b, bi) => (
+                        <li key={bi}>{b}</li>
+                      ))}
+                    </ul>
+                  )}
                   <button className="btn-ver-mas" onClick={() => setOpen(i)}>Ver más</button>
                 </div>
               </div>
@@ -95,7 +102,13 @@ export default function ServicesCarousel({ items = [] }) {
             <button className="svc-modal-close" aria-label="Cerrar" onClick={() => setOpen(null)}>×</button>
             <h3 id="svc-modal-title" className="svc-modal-title">{items[open]?.titulo}</h3>
             <div className="svc-modal-content">
-              <p>{items[open]?.detalles || items[open]?.desc}</p>
+              {items[open]?.modal ? (
+                items[open].modal
+              ) : Array.isArray(items[open]?.detalles) ? (
+                items[open].detalles.map((p, pi) => <p key={pi}>{p}</p>)
+              ) : (
+                <p>{items[open]?.detalles || items[open]?.desc}</p>
+              )}
             </div>
           </div>
         </div>
