@@ -48,6 +48,46 @@ export default function Servicios() {
       ),
     },
     {
+      titulo: 'Mediación Deportiva',
+      desc: 'Resolución de conflictos en el ámbito deportivo.',
+      detalles:
+        'Acompañamiento neutral para resolver disputas entre deportistas, clubes, entrenadores y federaciones, priorizando acuerdos rápidos que permitan la continuidad deportiva.',
+      bullets: [
+        'Conflictos entre deportistas, clubes, entrenadores y agentes.',
+        'Contratos, fichajes, transferencias y primas/bonos.',
+        'Selección, disciplina interna y códigos de conducta.',
+        'Derechos de imagen, patrocinios y uso de marcas.',
+        'Relaciones con federaciones, ligas y asociaciones.',
+      ],
+      modal: (
+        <>
+          <p>
+            La mediación deportiva ofrece una vía rápida y confidencial para resolver controversias en el ecosistema
+            del deporte, favoreciendo acuerdos que mantengan el rendimiento y la continuidad de la actividad.
+          </p>
+          <p>Temas habituales que atendemos:</p>
+          <ul>
+            <li>
+              Relaciones contractuales: fichajes, transferencias, primas, rescisión y cumplimiento de contratos.
+            </li>
+            <li>
+              Disputas entre deportistas, clubes, entrenadores y agentes; códigos disciplinarios y convivencia interna.
+            </li>
+            <li>
+              Derechos de imagen, patrocinios, uso de marcas y compromisos comerciales vinculados a la práctica deportiva.
+            </li>
+            <li>
+              Interacción con federaciones, ligas y asociaciones para la búsqueda de soluciones consensuadas.
+            </li>
+          </ul>
+          <p>
+            Beneficios: rapidez, confidencialidad, reducción de costos y preservación de las relaciones profesionales,
+            con acuerdos con validez y ejecutabilidad conforme al marco legal aplicable.
+          </p>
+        </>
+      ),
+    },
+    {
       titulo: 'Áreas Civil y Mercantil',
       desc: 'Conflictos contractuales y comerciales. Incumplimientos, disputas y arrendamientos.',
       detalles: 'Atendemos controversias civiles y mercantiles con soluciones legales y consensuadas, evitando procesos judiciales largos y costosos.',
