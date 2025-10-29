@@ -8,6 +8,44 @@ export default function Servicios() {
       titulo: 'Mediación Privada Certificada con Fe Pública',
       desc: 'Acuerdos con validez legal y fuerza de cosa juzgada (vinculantes).',
       detalles: 'Ofrecemos mediación privada certificada con fe pública para resolver conflictos de manera eficiente y con validez legal. Preparación de convenios, firmas y seguimiento del cumplimiento.',
+      bullets: [
+        'Acuerdos basados en los intereses y necesidades (búsqueda de consensos).',
+        'Acuerdo benéfico para las partes.',
+        'Seguridad, economía, Fe Pública y certeza jurídica para los involucrados.',
+      ],
+      modal: (
+        <>
+          <p>
+            La <strong>mediación privada certificada</strong> ofrece una alternativa eficaz y segura para la resolución
+            de conflictos sin necesidad de recurrir a un juicio.
+          </p>
+          <p>
+            A través de la <strong>intervención de mediadores certificados con Fe Pública</strong>, los acuerdos alcanzados
+            adquieren <strong>validez legal y fuerza de cosa juzgada</strong>, lo que significa que son <strong>vinculantes y ejecutables</strong>
+            ante cualquier autoridad.
+          </p>
+          <p>Este tipo de mediación garantiza:</p>
+          <ul>
+            <li>
+              <strong>Seguridad jurídica</strong>, al estar respaldada por la ley y por un mediador autorizado.
+            </li>
+            <li>
+              <strong>Economía procesal</strong>, ya que reduce costos y tiempos en comparación con un proceso judicial.
+            </li>
+            <li>
+              <strong>Fe Pública</strong>, que otorga <strong>certeza y autenticidad</strong> a los convenios firmados.
+            </li>
+            <li>
+              <strong>Certeza jurídica</strong> para todas las partes involucradas, asegurando que los compromisos se cumplan
+              conforme al marco legal vigente.
+            </li>
+          </ul>
+          <p>
+            De esta forma, la mediación privada certificada promueve la <strong>solución pacífica de controversias</strong>,
+            el <strong>diálogo constructivo</strong> y el fortalecimiento de la <strong>confianza entre las partes</strong>.
+          </p>
+        </>
+      ),
     },
     {
       titulo: 'Áreas Civil y Mercantil',
