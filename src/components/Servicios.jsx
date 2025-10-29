@@ -286,21 +286,21 @@ export default function Servicios() {
         <h2 className="servicios-title">Nuestros Servicios</h2>
         <div className="servicios-list-grid" aria-label="Listado resumido de servicios">
           <ul className="servicios-list">
-            <li>MEDIACIÓN PRIVADA CERTIFICADA CON FE PÚBLICA</li>
-            <li>MEDIACIÓN DEPORTIVA</li>
-            <li>ÁREAS CIVIL Y MERCANTIL</li>
-            <li>ÁREAS BANCARIO Y FINANCIERO</li>
-            <li>ÁREAS ADMINISTRATIVO Y AMPARO</li>
-            <li>ÁREA FAMILIAR Y COMUNITARIA</li>
+            <li>Mediación privada certificada con fe pública</li>
+            <li>Mediación deportiva</li>
+            <li>Áreas civil y mercantil</li>
+            <li>Áreas bancario y financiero</li>
+            <li>Áreas administrativo y amparo</li>
+            <li>Área familiar y comunitaria</li>
           </ul>
           <ul className="servicios-list">
-            <li>DERECHO BANCARIO, BURSÁTIL Y FINANCIERO EN GENERAL</li>
-            <li>DERECHO CORPORATIVO</li>
-            <li>GOBIERNO CORPORATIVO</li>
-            <li>COMPLIANCE / CUMPLIMIENTO NORMATIVO</li>
-            <li>PREVENCIÓN DE LAVADO DE DINERO Y FINANCIAMIENTO AL TERRORISMO</li>
-            <li>DERECHO ADMINISTRATIVO</li>
-            <li>LITIGIO CIVIL, MERCANTIL, ADMINISTRATIVO Y AMPARO</li>
+            <li>Derecho bancario, bursátil y financiero en general</li>
+            <li>Derecho corporativo</li>
+            <li>Gobierno corporativo</li>
+            <li>Compliance / cumplimiento normativo</li>
+            <li>Prevención de lavado de dinero y financiamiento al terrorismo</li>
+            <li>Derecho administrativo</li>
+            <li>Litigio civil, mercantil, administrativo y amparo</li>
           </ul>
         </div>
         <ServicesCarousel items={servicios} />
