@@ -21,7 +21,7 @@ const associates = [
     photo: '/img/jose-medina.jpg',
     alt: 'José Medina Gómez',
     bio:
-      'Egresado de la Licenciatura de Derecho de la Universidad Iberoamericana. Con una trayectoria de 10 años en el Sector Público y 14 años de práctica legal en materia civil, mercantil, administrativa y financiera. Ha trabajado en la Gerencia Jurídica de Petróleos Mexicanos como abogado en las áreas penal y laboral; en la Subsidiaria Pemex-Refinación, como asesor legal del Subdirector de Distribución; posteriormente en la Cámara de Senadores como asesor legal de la Comisión de Comercio y por último como Subdirector de Concesiones de Zona Federal Marítimo Terrestre en la Secretaría del Medio Ambiente y Recursos Naturales. Durante este tiempo, ha representado ante la CONDUSEF, CNBV, SHCP y BANXICO y diversas autoridades administrativas a diversas Instituciones Financieras como Banca Confía (liquidada), CITIBANK S. A., BANORTE, BANAMEX, HSBC, GE Money Bank, S.A. y GE Consumo México.',
+      'Egresado de la Licenciatura de Derecho de la Universidad Iberoamericana. Con una trayectoria de 10 años en el Sector Público y 14 años de práctica legal en materia civil, mercantil, administrativa y financiera. Ha trabajado en la Gerencia Jurídica de Petróleos Mexicanos como abogado en las áreas penal y laboral; en la Subsidiaria Pemex-Refinación, como asesor legal del Subdirector de Distribución; posteriormente en la Cámara de Senadores como asesor legal de la Comisión de Comercio y por último como Subdirector de Concesiones de Zona Federal Marítimo Terrestre en la Secretaría del Medio Ambiente y Recursos Naturales.',
   },
   
   {
@@ -29,7 +29,7 @@ const associates = [
     photo: '/img/felix-alonso.jpg',
     alt: 'Félix Alonso Garza Roa',
     bio:
-      'Egresado de la licenciatura en Derecho del Tecnológico Universitario de México. Cuenta con maestría en Derecho Civil y doctorado en Derecho y Ciencias Jurídicas así como más de 20 años de experiencia, especializándose en el área de litigio civil-mercantil y familiar. Su práctica incluye la representación de clientes nacionales e internacionales en todos los niveles del sistema Judicial, tanto Locales como Federales. Así mismo, cuenta con experiencia en materia de análisis y dictaminación de asuntos litigiosos en general, destacando la práctica de diversas auditorias sobre cartera litigiosa de distintas entidades públicas y privadas. Desde 1999 a 2010, colaboró como socio en el despacho Isos & Poire, Abogados S.C., fungiendo como Director del área de Litigio. Socio del despacho Villa, Medina, Guzmán y Gil Abogados, S.C. de 2011 a la fecha.',
+      'Egresado de la licenciatura en Derecho del Tecnológico Universitario de México. Cuenta con maestría en Derecho Civil y doctorado en Derecho y Ciencias Jurídicas así como más de 20 años de experiencia, especializándose en el área de litigio civil-mercantil y familiar. Su práctica incluye la representación de clientes nacionales e internacionales en todos los niveles del sistema Judicial, tanto Locales como Federales. Así mismo, cuenta con experiencia en materia de análisis y dictaminación de asuntos litigiosos en general, destacando la práctica de diversas auditorias sobre cartera litigiosa de distintas entidades públicas y privadas.',
   },
   {
     name: 'José Manuel Guillemot Cesari',
@@ -73,27 +73,14 @@ export default function AssociatesCarousel() {
 
   const onDot = (p) => setIndex(Math.min(p * cardsPerView, maxIndex));
 
-  // Detectar móvil y auto-avanzar cada 10s solo en móvil
+  // Auto-avanzar cada 5s en todos los tamaños y volver al inicio al final
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 767px)');
-    const apply = () => setIsMobile(mq.matches);
-    apply();
-    const handler = (e) => setIsMobile(e.matches);
-    if (mq.addEventListener) mq.addEventListener('change', handler);
-    else mq.addListener(handler);
-    return () => {
-      if (mq.removeEventListener) mq.removeEventListener('change', handler);
-      else mq.removeListener(handler);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile || total === 0) return;
+    if (total === 0) return;
     const id = setInterval(() => {
       setIndex((i) => (i >= maxIndex ? 0 : i + 1));
-    }, 10000);
+    }, 5000);
     return () => clearInterval(id);
-  }, [isMobile, maxIndex, total]);
+  }, [maxIndex, total]);
 
   return (
     <div
