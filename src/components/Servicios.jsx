@@ -130,8 +130,41 @@ export default function Servicios() {
     },
     {
       titulo: 'Áreas Administrativo y Amparo',
-      desc: 'Disputas con entidades públicas.',
-      detalles: 'Impugnación de actos de autoridad, recursos administrativos y juicios de amparo. Estrategia integral para prevenir, corregir o anular actos que vulneren derechos.',
+      desc: 'Disputas con entidades públicas, multas, licencias y amparo.',
+      detalles: 'Asesoría y mediación especializada en conflictos con autoridades administrativas para soluciones legales sin litigios prolongados.',
+      bullets: [
+        'Disputas con entidades públicas.',
+        'Multas, sanciones o clausuras.',
+        'Negativas de permisos o licencias.',
+        'Defensa y protección de derechos ciudadanos.',
+      ],
+      modal: (
+        <>
+          <p>
+            En esta área se ofrece asesoría y mediación especializada en conflictos entre particulares y autoridades
+            gubernamentales o administrativas, promoviendo soluciones legales sin necesidad de litigios prolongados.
+          </p>
+          <p>Atendemos casos como:</p>
+          <ul>
+            <li>
+              Disputas con entidades públicas, derivadas de actos administrativos que afectan derechos o intereses legítimos.
+            </li>
+            <li>
+              Multas, sanciones o clausuras, buscando su revisión o modificación a través del diálogo y la mediación.
+            </li>
+            <li>
+              Negativas o retrasos en permisos, licencias o trámites administrativos, impulsando acuerdos que permitan la regularización.
+            </li>
+            <li>
+              Procedimientos de amparo, orientados a proteger los derechos fundamentales frente a actos de autoridad considerados injustos o arbitrarios.
+            </li>
+          </ul>
+          <p>
+            Nuestra intervención garantiza certeza jurídica, transparencia y economía procesal, privilegiando siempre la resolución
+            pacífica de controversias y la protección efectiva de los derechos ciudadanos.
+          </p>
+        </>
+      ),
     },
     {
       titulo: 'Áreas Familiar y Comunitaria',
