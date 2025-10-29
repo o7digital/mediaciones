@@ -47,6 +47,14 @@ export default function Mediacion() {
           resuelvan el conflicto.
         </p>
 
+        <div className="mediacion-image-wrapper">
+          <img
+            src="/img/conflicto.jpg"
+            alt="Conflicto"
+            className="mediacion-image"
+          />
+        </div>
+
         <h3>Mediación Privada Certificada</h3>
         <p>
           Es un proceso alternativo de solución al conflicto que fortalece las relaciones a
