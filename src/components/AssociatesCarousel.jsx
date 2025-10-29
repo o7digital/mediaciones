@@ -10,13 +10,6 @@ const associates = [
       'Licenciada en Derecho por la Universidad Iberoamericana, Maestría en Derechos Humanos (UIA) y diplomado en Derecho Corporativo por el ITAM. Mediadora privada certificada (No. 122) por el Tribunal Superior de Justicia. Experiencia en mediación comunitaria y corporativa con empresas como Grupo Minero de México, Banca Monex, Bancomer y comunidades agrarias. Fue presidenta de la Asociación de Egresados de Derecho de la Universidad Iberoamericana y miembro del Ilustre y Nacional Colegio de Abogados de México.',
   },
   {
-    name: 'José María Fernández Alonso',
-    photo: '/img/jose-maria.jpg',
-    alt: 'José María Fernández Alonso',
-    bio:
-      'Egresado de la licenciatura en Derecho por la Universidad Panamericana, contando con especialidades en Derecho Económico Corporativo y Derecho Fiscal, por la misma Universidad Panamericana. Tiene una trayectoria de 34 años en el sector financiero. Ha trabajado como Gerente Jurídico en Banco Nacional de México S.A., Director Jurídico de Financiamiento Corporativo en Banco Santander, S.A. y Director General Adjunto de Autorizaciones al Sistema Financiero A en la Comisión Nacional Bancaria y de Valores.',
-  },
-  {
     name: 'Jaime Villa Escobosa',
     photo: '/img/jaime-villa.jpg',
     alt: 'Jaime Villa Escobosa',
