@@ -91,8 +91,42 @@ export default function Servicios() {
     },
     {
       titulo: 'Áreas Bancario y Financiero',
-      desc: 'Reestructuración de deudas, mediación hipotecaria.',
-      detalles: 'Experiencia en reestructuras, recuperación de cartera, negociación con instituciones, créditos hipotecarios y garantías. Acompañamiento desde la negociación hasta la formalización.',
+      desc: 'Reestructuración de deudas, mediación hipotecaria y acuerdos con instituciones.',
+      detalles: 'Acompañamiento especializado para resolver conflictos con instituciones financieras mediante mediación y negociación efectiva.',
+      bullets: [
+        'Reestructuración de deudas.',
+        'Mediación hipotecaria.',
+        'Acuerdos con instituciones financieras.',
+        'Conflictos por créditos o garantías.',
+      ],
+      modal: (
+        <>
+          <p>
+            En esta área se brinda acompañamiento especializado para la solución de conflictos entre particulares e instituciones
+            financieras, mediante procesos de mediación que buscan acuerdos sostenibles y justos.
+          </p>
+          <p>Atendemos principalmente:</p>
+          <ul>
+            <li>
+              Reestructuración de deudas, logrando convenios que permitan a los deudores cumplir con sus obligaciones sin
+              comprometer su estabilidad económica.
+            </li>
+            <li>
+              Mediación hipotecaria, orientada a conservar el patrimonio familiar y evitar juicios o remates innecesarios.
+            </li>
+            <li>
+              Negociación con bancos, financieras y casas de crédito, buscando plazos, intereses o condiciones más favorables para ambas partes.
+            </li>
+            <li>
+              Conflictos por créditos, tarjetas o garantías, fomentando acuerdos que restablezcan la confianza y protejan los derechos de los involucrados.
+            </li>
+          </ul>
+          <p>
+            Nuestra mediación en materia bancaria y financiera garantiza seguridad jurídica, transparencia y economía procesal,
+            ofreciendo soluciones con validez legal y certeza jurídica reconocidas por las instituciones.
+          </p>
+        </>
+      ),
     },
     {
       titulo: 'Áreas Administrativo y Amparo',
