@@ -33,12 +33,12 @@ export default function ServicesCarousel({ items = [] }) {
 
   const onDot = (p) => setIndex(Math.min(p * cardsPerView, maxIndex));
 
-  // Auto-avanzar cada 4s en todos los tamaños y volver al inicio al final
+  // Auto-avanzar cada 5s en todos los tamaños y volver al inicio al final
   useEffect(() => {
     if (total === 0) return;
     const id = setInterval(() => {
       setIndex((i) => (i >= maxIndex ? 0 : i + 1));
-    }, 4000);
+    }, 5000);
     return () => clearInterval(id);
   }, [maxIndex, total]);
 
