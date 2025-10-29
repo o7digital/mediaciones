@@ -33,27 +33,14 @@ export default function ServicesCarousel({ items = [] }) {
 
   const onDot = (p) => setIndex(Math.min(p * cardsPerView, maxIndex));
 
-  // Detectar móvil y auto-avanzar cada 10s solo en móvil
+  // Auto-avanzar cada 4s en todos los tamaños y volver al inicio al final
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 767px)');
-    const apply = () => setIsMobile(mq.matches);
-    apply();
-    const handler = (e) => setIsMobile(e.matches);
-    if (mq.addEventListener) mq.addEventListener('change', handler);
-    else mq.addListener(handler);
-    return () => {
-      if (mq.removeEventListener) mq.removeEventListener('change', handler);
-      else mq.removeListener(handler);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile || total === 0) return;
+    if (total === 0) return;
     const id = setInterval(() => {
       setIndex((i) => (i >= maxIndex ? 0 : i + 1));
-    }, 10000);
+    }, 4000);
     return () => clearInterval(id);
-  }, [isMobile, maxIndex, total]);
+  }, [maxIndex, total]);
 
   return (
     <div className="svc-carousel" role="region" aria-label="Carrusel de servicios" style={{ ['--cards-per-view']: cardsPerView }}>
