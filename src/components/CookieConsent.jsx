@@ -25,14 +25,13 @@ export default function CookieConsent() {
       <div className="cookie-content">
         <p>
           Usamos cookies para mejorar tu experiencia, analizar el tráfico y personalizar contenido.
-          Consulta el <a href="#aviso-privacidad">Aviso de Privacidad</a> para más información.
+          Consulta el <a href="/aviso-privacidad.html" target="_blank" rel="noopener noreferrer">Aviso de Privacidad</a> para más información.
         </p>
         <div className="cookie-actions">
           <button className="cookie-btn primary" onClick={accept}>Aceptar</button>
-          <a className="cookie-link" href="#aviso-privacidad">Más información</a>
+          <a className="cookie-link" href="/aviso-privacidad.html" target="_blank" rel="noopener noreferrer">Más información</a>
         </div>
       </div>
     </div>
   );
 }
-
