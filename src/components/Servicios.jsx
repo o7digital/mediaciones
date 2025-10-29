@@ -244,6 +244,25 @@ export default function Servicios() {
     <section id="servicios" className="servicios-section">
       <div className="servicios-container">
         <h2 className="servicios-title">Nuestros Servicios</h2>
+        <div className="servicios-list-grid" aria-label="Listado resumido de servicios">
+          <ul className="servicios-list">
+            <li>MEDIACIÓN PRIVADA CERTIFICADA CON FE PÚBLICA</li>
+            <li>MEDIACIÓN DEPORTIVA</li>
+            <li>ÁREAS CIVIL Y MERCANTIL</li>
+            <li>ÁREAS BANCARIO Y FINANCIERO</li>
+            <li>ÁREAS ADMINISTRATIVO Y AMPARO</li>
+            <li>ÁREA FAMILIAR Y COMUNITARIA</li>
+          </ul>
+          <ul className="servicios-list">
+            <li>DERECHO BANCARIO, BURSÁTIL Y FINANCIERO EN GENERAL</li>
+            <li>DERECHO CORPORATIVO</li>
+            <li>GOBIERNO CORPORATIVO</li>
+            <li>COMPLIANCE / CUMPLIMIENTO NORMATIVO</li>
+            <li>PREVENCIÓN DE LAVADO DE DINERO Y FINANCIAMIENTO AL TERRORISMO</li>
+            <li>DERECHO ADMINISTRATIVO</li>
+            <li>LITIGIO CIVIL, MERCANTIL, ADMINISTRATIVO Y AMPARO</li>
+          </ul>
+        </div>
         <ServicesCarousel items={servicios} />
       </div>
     </section>

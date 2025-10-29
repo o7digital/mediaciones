@@ -18,6 +18,42 @@
   font-weight: bold;
 }
 
+/* Listado resumido en dos columnas */
+.servicios-list-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 1.25rem 2rem;
+  align-items: start;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  max-width: 1200px;
+}
+
+.servicios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.servicios-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #0f0f0f;
+}
+
+.servicios-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #003366;
+  font-weight: bold;
+}
+
 .servicios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -73,6 +109,16 @@
 @media (max-width: 768px) {
   .servicios-title {
     font-size: 2rem;
+  }
+
+  .servicios-list-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem 1rem;
+    max-width: 680px;
+  }
+
+  .servicios-list li {
+    font-size: 1rem;
   }
 
   .servicio-card h3 {
