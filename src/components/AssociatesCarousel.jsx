@@ -23,13 +23,7 @@ const associates = [
     bio:
       'Egresado de la Licenciatura de Derecho de la Universidad Iberoamericana. Con una trayectoria de 10 años en el Sector Público y 14 años de práctica legal en materia civil, mercantil, administrativa y financiera. Ha trabajado en la Gerencia Jurídica de Petróleos Mexicanos como abogado en las áreas penal y laboral; en la Subsidiaria Pemex-Refinación, como asesor legal del Subdirector de Distribución; posteriormente en la Cámara de Senadores como asesor legal de la Comisión de Comercio y por último como Subdirector de Concesiones de Zona Federal Marítimo Terrestre en la Secretaría del Medio Ambiente y Recursos Naturales. Durante este tiempo, ha representado ante la CONDUSEF, CNBV, SHCP y BANXICO y diversas autoridades administrativas a diversas Instituciones Financieras como Banca Confía (liquidada), CITIBANK S. A., BANORTE, BANAMEX, HSBC, GE Money Bank, S.A. y GE Consumo México.',
   },
-  {
-    name: 'Fabián Alejandro Guzmán García',
-    photo: '/img/fabian-ale.jpg',
-    alt: 'Fabián Alejandro Guzmán García',
-    bio:
-      'Egresado de la Escuela Libre de Derecho. Se especializa en las áreas bursátiles, bancaria y financiera tanto a nivel nacional como internacional. Fue abogado en la Dirección de Disposiciones de Banca Central de Banco de México para operaciones de cambios internacionales, metales, deuda pública externa y control de cambios. Durante nueve años trabajó en Mijares, Angoitia, Cortés y Fuentes y en Fried, Frank, Harris, Shriver & Jacobson, dos importantes firmas en México y Nueva York. Fue socio fundador y socio encargado del área financiera de Romo, Paillés y Guzmán, S.C. durante más de 10 años. Como abogado en México y en Nueva York ha participado en un gran número de operaciones en el mercado de capitales durante los últimos 20 años.',
-  },
+  
   {
     name: 'Félix Alonso Garza Roa',
     photo: '/img/felix-alonso.jpg',
@@ -44,20 +38,8 @@ const associates = [
     bio:
       'Egresado de la Licenciatura en Derecho del Instituto Tecnológico Autónomo de México. Tiene una trayectoria de 30 años en el sector financiero, tanto público como privado. Comenzó su carrera como Subdirector de Proyectos y Desarrollo en la Comisión Nacional Bancaria y de Valores, para posteriormente trabajar como Director Jurídico de Latinoamérica para Merrill Lynch/Bank of America y posteriormente como Director Jurídico y Compliance de The Royal Bank of Scotland. Fungió como Presidente del Comité de Contralores Normativos y participó en los Comités Jurídico, de Certificación y Relaciones Públicas de la Asociación Mexicana de Intermediarios Bursátiles. Sus áreas de práctica son: Financiero (incluyendo Bancario y Bursátil), Tecnología Financiera (FinTech), Compliance, Corporativo, Mercantil y Prevención de Lavado de Dinero.',
   },
-  {
-    name: 'Fernando Luis Corvera Caraza',
-    photo: '/img/fernando-luis.jpg',
-    alt: 'Fernando Luis Corvera Caraza',
-    bio:
-      'Es abogado, egresado de la Universidad Iberoamericana, A.C. Cuenta con un diplomado en Derecho Económico y Corporativo en la Universidad Panamericana. Tiene amplia experiencia laboral en el sector público. Ingresó al Banco de México en 1981. A partir de 1989 ocupó diversos cargos de funcionario, entre los que destacan: Gerente de Disposiciones al Sistema Financiero, Director de Disposiciones de Banca Central, Secretario de la Junta de Gobierno y Secretario de la Comisión de Cambios del propio Banco Central. Ha impartido diversas conferencias tanto en México como en el extranjero. Participó como Vocal en la Junta de Gobierno de la Comisión Nacional Bancaria y de Valores, fue Secretario del Comité de Remuneraciones del Banco de México y Coordinador del Comité de Información del propio Banco, en materia de Transparencia. Recibió una condecoración al mérito en Derecho Financiero en 2016, por el organismo denominado Institución del Día del Abogado, A.C.',
-  },
-  {
-    name: 'José Antonio Bahena Morales',
-    photo: '/img/jose-antonio2.jpg',
-    alt: 'José Antonio Bahena Morales',
-    bio:
-      'Egresado de la Licenciatura en Derecho por la Universidad Nacional Autónoma de México. Tiene una trayectoria de 37 años de servicio en la Administración Pública Federal, en el sector financiero. Ha trabajado para la Secretaría de Hacienda y Crédito Público, en la extinta Comisión Nacional de Valores y en la Comisión Nacional Bancaria y de Valores, ocupando diversos cargos de funcionario, entre los que destacan: Director General de Disposiciones, Autorizaciones y Consultas y Director General de Autorizaciones al Sistema Financiero, participando con tal carácter en la conformación del marco regulatorio bancario y bursátil mexicano y en numerosos procesos de constitución, organización y operación de entidades del sector. Ha sido catedrático en la Universidad Nacional Autónoma de México en las materias de Introducción al Estudio del Derecho y Derecho Civil y expositor en diversos diplomados de prestigiosas Universidades del país.',
-  },
+  
+  
 ];
 
 export default function AssociatesCarousel() {
