@@ -7,6 +7,14 @@ export default function Mediacion() {
       <div className="mediacion-container">
         <h2 className="mediacion-title">La Mediación</h2>
 
+        <div className="mediacion-image-wrapper">
+          <img
+            src="/img/amina-lamediacion.jpg"
+            alt="La Mediación"
+            className="mediacion-image"
+          />
+        </div>
+
         <p>
           La psicología de la historia o de la sociología ha contribuido a configurar un cuerpo
           teórico sobre el conflicto fundamentado en la observación clínica, la reflexión y la
