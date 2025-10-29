@@ -170,11 +170,73 @@ export default function Servicios() {
       titulo: 'Áreas Familiar y Comunitaria',
       desc: 'Conflictos familiares o sociales.',
       detalles: 'Mediación en divorcios, pensiones, guarda y custodia, herencias y conflictos vecinales o comunitarios, con enfoque restaurativo y acuerdos sostenibles.',
+      bullets: [
+        'Divorcios, pensiones, guarda y custodia.',
+        'Herencias y acuerdos de convivencia.',
+        'Conflictos vecinales y comunitarios.',
+        'Acuerdos restaurativos y plan parental.',
+      ],
+      modal: (
+        <>
+          <p>
+            En esta área atendemos conflictos familiares y comunitarios mediante mediación, priorizando el bienestar y acuerdos sostenibles.
+          </p>
+          <p>Casos que abordamos:</p>
+          <ul>
+            <li>
+              Divorcios, pensiones alimenticias, guarda y custodia, régimen de visitas.
+            </li>
+            <li>
+              Herencias y acuerdos de convivencia.
+            </li>
+            <li>
+              Convivencia vecinal y comunitaria, promoviendo el diálogo y la cooperación.
+            </li>
+          </ul>
+          <p>
+            Enfoque restaurativo: comunicación efectiva, corresponsabilidad y acuerdos centrados en el interés superior de niñas, niños y adolescentes.
+          </p>
+          <p>
+            Beneficios: acuerdos rápidos, económicos y con validez legal, reduciendo la conflictividad a futuro.
+          </p>
+        </>
+      ),
     },
     {
       titulo: 'Áreas Corporativo y Cumplimiento Normativo',
       desc: 'Gobierno corporativo, prevención de conflictos en empresas.',
       detalles: 'Diseño de políticas, gobierno corporativo, cumplimiento regulatorio, prevención de riesgos y solución de disputas corporativas mediante ADR.',
+      bullets: [
+        'Gobierno corporativo y políticas internas.',
+        'Prevención de conflictos entre socios y proveedores.',
+        'Cumplimiento regulatorio y gestión de riesgos.',
+        'Resolución alternativa de disputas (ADR).',
+      ],
+      modal: (
+        <>
+          <p>
+            Acompañamos a empresas en la prevención y solución de controversias corporativas mediante mediación y cumplimiento normativo.
+          </p>
+          <p>Casos frecuentes:</p>
+          <ul>
+            <li>
+              Desacuerdos entre socios, proveedores y clientes; negociación y revisión de contratos.
+            </li>
+            <li>
+              Confidencialidad y no competencia; relaciones laborales internas.
+            </li>
+            <li>
+              Resolución alternativa de disputas para evitar litigios y reducir costos.
+            </li>
+          </ul>
+          <p>
+            Cumplimiento: diseño de políticas, auditorías, matrices de riesgo y capacitación para mitigar contingencias.
+          </p>
+          <p>
+            Resultados: acuerdos ejecutables, reducción de costos/tiempos y fortalecimiento del gobierno corporativo.
+          </p>
+        </>
+      ),
     },
   ];
 
