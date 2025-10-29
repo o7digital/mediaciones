@@ -66,14 +66,11 @@ export default function ServicesCarousel({ items = [] }) {
               <div className="svc-card-inner">
                 <div className="svc-info">
                   <h3 className="svc-title">{s.titulo}</h3>
-                  <p className="svc-desc">{s.desc}</p>
-                  {Array.isArray(s.bullets) && s.bullets.length > 0 && (
-                    <ul className="svc-list">
-                      {s.bullets.map((b, bi) => (
-                        <li key={bi}>{b}</li>
-                      ))}
-                    </ul>
-                  )}
+                  <ul className="svc-list">
+                    {s.desc ? <li>{s.desc}</li> : null}
+                    {Array.isArray(s.bullets) && s.bullets.length > 0 &&
+                      s.bullets.map((b, bi) => <li key={bi}>{b}</li>)}
+                  </ul>
                   <button className="btn-ver-mas" onClick={() => setOpen(i)}>Ver más</button>
                 </div>
               </div>
