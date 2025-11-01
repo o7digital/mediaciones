@@ -95,7 +95,7 @@ export default function HeroLawhere() {
             </div>
             <div className="stat">
               <h4>95%</h4>
-              <p>Arbitrajes exitosos</p>
+              <p>de Mediaciones</p>
             </div>
             <div className="stat">
               <h4>+35</h4>
