@@ -9,7 +9,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         {/* Logo (antes de Facebook) */}
-        <h1 className="logo">SCM ABOGADOS Y ASOCIADOS</h1>
+        <h1 className="logo">SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS</h1>
 
         {/* Redes sociales */}
         <div className="social-icons">
