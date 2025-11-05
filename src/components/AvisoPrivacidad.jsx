@@ -6,7 +6,7 @@ export default function AvisoPrivacidad() {
       <div className="aviso-privacidad-container">
         <h2 className="aviso-title">Aviso de Privacidad</h2>
         <p>
-          SCM Y ABOGADOS ASOCIADOS (en lo sucesivo, “la Firma”) con domicilio en Río Pánuco 43, Col. Renacimiento,
+          SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS (en lo sucesivo, “la Firma”) con domicilio en Río Pánuco 43, Col. Renacimiento,
           Cuauhtémoc, CDMX, y teléfono +52 55 4616 7798, es responsable del tratamiento de los datos personales que
           recaba y se compromete a su protección conforme a la legislación aplicable en materia de protección de datos.
         </p>
@@ -41,7 +41,7 @@ export default function AvisoPrivacidad() {
         <h3>Derechos ARCO y contacto</h3>
         <p>
           Puedes ejercer tus derechos de Acceso, Rectificación, Cancelación u Oposición, así como revocar tu
-          consentimiento, escribiendo a <a href="mailto:info@sca.com">info@sca.com</a>. Incluye tu nombre, medio de
+          consentimiento, escribiendo a <a href="mailto:info@scmabogados.com">info@scmabogados.com</a>. Incluye tu nombre, medio de
           contacto y la descripción del derecho que deseas ejercer.
         </p>
 

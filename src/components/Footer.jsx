@@ -30,7 +30,7 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Contacto</h4>
           <p>Tel: +52 55 4616 7798</p>
-          <p>Email: info@sca.com</p>
+          <p>Email: <a href="mailto:info@scmabogados.com">info@scmabogados.com</a></p>
           <p>Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX</p>
         </div>
       </div>

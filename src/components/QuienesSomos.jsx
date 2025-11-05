@@ -6,7 +6,7 @@ export default function QuienesSomos() {
     <section className="quienes-somos-section" id="quienes-somos">
       <h2>¿Quiénes Somos?</h2>
       <p>
-        SCM Y ABOGADOS ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra
+        SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra
         práctica combina mediación privada certificada con Fe Pública —que otorga validez legal y fuerza de cosa
         juzgada a los convenios— con estrategia jurídica integral. Así, logramos acuerdos ejecutables, reduciendo
         litigios innecesarios y maximizando la seguridad jurídica, los tiempos y los costos.
