@@ -1,3 +1,12 @@
+import ServerError from './components/ServerError';
+import './index.css';
+
+export default function App() {
+  return <ServerError />;
+}
+
+// SITIO SUSPENDIDO - Para reactivar, descomentar abajo y comentar arriba
+/*
 import Header from './components/Header';
 import HeroLawhere from './components/HeroLawhere';
 import QuienesSomos from './components/QuienesSomos';
@@ -6,7 +15,6 @@ import Servicios from './components/Servicios';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './index.css';
 import CookieConsent from './components/CookieConsent';
 
 export default function App() {
@@ -26,3 +34,4 @@ export default function App() {
     </>
   );
 }
+*/
