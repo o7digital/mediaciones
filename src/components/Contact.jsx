@@ -1,43 +1,45 @@
 import React from 'react';
 import './Contact.css';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Contact() {
+  const { copy } = useLanguage();
+  const contact = copy.contact;
+
   return (
     <section id="contacto" className="contact-section">
       <div className="contact-layout">
         <div className="map-container">
           <iframe
-            title="Ubicación: Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX"
+            title={contact.mapTitle}
             className="map-frame"
             src="https://www.google.com/maps?q=R%C3%ADo%20P%C3%A1nuco%2043%2C%20Col.%20Renacimiento%2C%20Cuauht%C3%A9moc%2C%20CDMX&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            aria-label="Mapa de la dirección Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX"
+            aria-label={contact.mapAria}
           />
         </div>
 
         <div className="contact-container">
-          <h2 className="contact-title">Contactar</h2>
-          <p className="contact-description">
-            Si tienes dudas o deseas agendar una mediación, llena el formulario y nos pondremos en contacto contigo.
-          </p>
+          <h2 className="contact-title">{contact.title}</h2>
+          <p className="contact-description">{contact.description}</p>
           <form className="contact-form">
             <input 
               type="text" 
-              placeholder="Nombre completo" 
+              placeholder={contact.placeholders.name}
               required 
             />
             <input 
               type="email" 
-              placeholder="Correo electrónico" 
+              placeholder={contact.placeholders.email}
               required 
             />
             <textarea 
-              placeholder="Escribe tu mensaje aquí" 
+              placeholder={contact.placeholders.message}
               rows="5" 
               required
             ></textarea>
-            <button type="submit" className="contact-btn">Enviar mensaje</button>
+            <button type="submit" className="contact-btn">{contact.button}</button>
           </form>
         </div>
       </div>
