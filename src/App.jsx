@@ -16,6 +16,11 @@ export default function App() {
 
   useEffect(() => {
     document.documentElement.lang = lang;
+    if (lang === 'es') {
+      document.title = 'Sitio Oficial - Solís Cámara Mediadores Abogados y Asociados - Especialistas en Mediaciones';
+    } else {
+      document.title = 'Official Website - Solis Camara Mediators & Attorneys - Mediation Specialists';
+    }
   }, [lang]);
 
   return (

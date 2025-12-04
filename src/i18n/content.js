@@ -35,7 +35,7 @@ export const content = {
     about: {
       title: '¿Quiénes Somos?',
       intro:
-        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra práctica combina mediación privada certificada con Fe Pública —que otorga validez legal y fuerza de cosa juzgada a los convenios— con estrategia jurídica integral. Así, logramos acuerdos ejecutables, reduciendo litigios innecesarios y maximizando la seguridad jurídica, los tiempos y los costos.',
+        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra práctica combina mediación privada certificada con Fe Pública —que otorga validez legal y fuerza de cosa juzgada a los convenios— con estrategia jurídica integral. Nuestra mediación certificada en CDMX ofrece soluciones reales y somos especialistas en métodos alternativos de solución de conflictos. Así, logramos acuerdos ejecutables, reduciendo litigios innecesarios y maximizando la seguridad jurídica, los tiempos y los costos.',
       philosophyTitle: 'Filosofía',
       philosophyText:
         'Escuchamos, comprendemos intereses y diseñamos rutas de solución que equilibran lo humano y lo legal. Actuamos con ética, confidencialidad y transparencia.',
@@ -97,7 +97,7 @@ export const content = {
       title: 'La Mediación',
       firstImageAlt: 'La Mediación',
       intro: [
-        'La psicología de la historia o de la sociología ha contribuido a configurar un cuerpo teórico sobre el conflicto fundamentado en la observación clínica, la reflexión y la comprobación histórica, el uso de modelos matemáticos y la constatación sociológica sobre tales costes de los conflictos sus causas y la forma en las que se desarrollan y crecen.',
+        'La psicología de la historia o de la sociología ha contribuido a configurar un cuerpo teórico sobre el conflicto fundamentado en la observación clínica, la reflexión y la comprobación histórica, el uso de modelos matemáticos y la constatación sociológica sobre tales costes de los conflictos sus causas y la forma en las que se desarrollan y crecen. Nuestros abogados mediadores con fe pública brindan servicios profesionales.',
         'El Conflicto se presenta en todo ámbito de la vida humana; y en todos los momentos de esta, se exterioriza desde el momento en que no hay coincidencias o que no se llenan las expectativas y pretensiones de las partes, es el momento donde surgen las diferencias o los conflictos.',
         'El conflicto es siempre visto como algo negativo, se define como el resultado disfuncional de la comunicación. La gente, los pueblos y sus comunidades lo han enfrentado indistintamente según los tiempos y circunstancias, encontrando en él soluciones al mismo que bien manejadas a través de la escucha activa, el diálogo y la comunicación logran acuerdos que son creados por los interesados e inmersos en el conflicto, trascendiéndolo en oportunidades de crecimiento dejando así el estancamiento del problema y alejando el antagonismo.',
       ],
@@ -407,7 +407,7 @@ export const content = {
     about: {
       title: 'About Us',
       intro:
-        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS is a firm focused on intelligent dispute resolution. Our practice combines certified private mediation with Public Faith—which grants legal validity and res judicata force to agreements—together with comprehensive legal strategy. This allows us to achieve enforceable agreements, reducing unnecessary litigation while maximizing legal certainty, time, and cost efficiency.',
+        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS is a firm focused on intelligent dispute resolution. Our practice combines certified private mediation with Public Faith—which grants legal validity and res judicata force to agreements—together with comprehensive legal strategy. Our certified mediation in Mexico City provides effective solutions and we specialize in alternative dispute resolution methods. This allows us to achieve enforceable agreements, reducing unnecessary litigation while maximizing legal certainty, time, and cost efficiency.',
       philosophyTitle: 'Philosophy',
       philosophyText:
         'We listen, understand interests, and design solution paths that balance the human and the legal. We act with ethics, confidentiality, and transparency.',
@@ -469,7 +469,7 @@ export const content = {
       title: 'Mediation',
       firstImageAlt: 'Mediation',
       intro: [
-        'Psychology, history, and sociology have helped shape a theoretical body on conflict based on clinical observation, reflection and historical verification, the use of mathematical models, and sociological evidence about the costs of conflicts, their causes, and how they unfold and grow.',
+        'Psychology, history, and sociology have helped shape a theoretical body on conflict based on clinical observation, reflection and historical verification, the use of mathematical models, and sociological evidence about the costs of conflicts, their causes, and how they unfold and grow. Our legal mediation experts offer professional guidance.',
         'Conflict appears in every sphere of human life and at all times; it surfaces when there is no alignment or expectations are not met. That is where differences and conflicts arise.',
         'Conflict is often seen as something negative, the dysfunctional result of communication. People, communities, and nations have faced it in many ways depending on time and circumstances, finding solutions that—when handled through active listening, dialogue, and communication—become agreements created by the parties involved, turning conflicts into opportunities for growth and moving away from antagonism.',
       ],

@@ -7,6 +7,10 @@ export default function Mediacion() {
   const { copy, lang } = useLanguage();
   const mediation = copy.mediation;
   const conflictImage = lang === 'en' ? '/img/conflict-en.png' : '/img/conflicto.jpg';
+  const altSeo =
+    lang === 'es'
+      ? 'Abogados mediadores certificados en CDMX – mediación profesional'
+      : 'Certified mediation attorneys Mexico City – professional mediation';
 
   return (
     <section id="mediacion" className="mediacion-section">
@@ -16,7 +20,7 @@ export default function Mediacion() {
         <div className="mediacion-image-wrapper">
           <OptimizedImage
             src="/img/amina-lamediacion.jpg"
-            alt={mediation.firstImageAlt}
+            alt={altSeo}
             className="mediacion-image"
           />
         </div>
@@ -33,7 +37,7 @@ export default function Mediacion() {
         <div className="mediacion-image-wrapper">
           <OptimizedImage
             src={conflictImage}
-            alt={mediation.secondImageAlt}
+            alt={altSeo}
             className="mediacion-image"
           />
         </div>
