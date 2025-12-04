@@ -3,8 +3,9 @@ import './Mediacion.css';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Mediacion() {
-  const { copy } = useLanguage();
+  const { copy, lang } = useLanguage();
   const mediation = copy.mediation;
+  const conflictImage = lang === 'en' ? '/img/conflict-en.png' : '/img/conflicto.jpg';
 
   return (
     <section id="mediacion" className="mediacion-section">
@@ -30,7 +31,7 @@ export default function Mediacion() {
 
         <div className="mediacion-image-wrapper">
           <img
-            src="/img/conflicto.jpg"
+            src={conflictImage}
             alt={mediation.secondImageAlt}
             className="mediacion-image"
           />
