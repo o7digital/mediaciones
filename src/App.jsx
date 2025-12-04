@@ -17,10 +17,19 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = lang;
     const descriptions = {
-      es: 'Mediación certificada en CDMX con fe pública: abogados mediadores especializados en solución de conflictos civiles, mercantiles, familiares y financieros.',
-      en: 'Certified mediation in Mexico City: legal mediation specialists offering alternative dispute resolution for civil, commercial, family, and financial matters.',
+      es: 'Solis Camara Mediadores Abogados y Asociados: sitio oficial. Especialistas en mediación certificada y asuntos legales en CDMX y a nivel nacional, civil, mercantil, familiar y bancaria.',
+      en: 'Solis Camara Mediadores Abogados y Asociados: official site. Mediation and legal specialists in Mexico City and nationwide, covering civil, commercial, family, and banking matters.',
     };
     const metaDescription = descriptions[lang] || descriptions.es;
+    const titles = {
+      es: 'Solis Camara Mediadores Abogados y Asociados : Sitio Oficial | Especialistas en Mediaciones y Asuntos Legales en CDMX y a Nivel Nacional',
+      en: 'Solis Camara Mediadores Abogados y Asociados: Official Site | Mediation and Legal Specialists in Mexico City and Nationwide',
+    };
+    const ogDescriptions = {
+      es: 'Despacho especializado en mediación certificada, métodos alternativos de solución de conflictos y asesoría legal en CDMX y a nivel nacional.',
+      en: 'Law firm specialized in certified mediation, alternative dispute resolution, and legal advisory in Mexico City and across Mexico.',
+    };
+
     let descTag = document.querySelector('meta[name="description"]');
     if (!descTag) {
       descTag = document.createElement('meta');
@@ -102,10 +111,25 @@ export default function App() {
     faqScript.textContent = JSON.stringify(faqData);
 
     if (lang === 'es') {
-      document.title = 'Sitio Oficial - Solís Cámara Mediadores Abogados y Asociados - Especialistas en Mediaciones';
+      document.title = titles.es;
     } else {
-      document.title = 'Official Website - Solis Camara Mediators & Attorneys - Mediation Specialists';
+      document.title = titles.en;
     }
+
+    const ensureMeta = (selector, attrs) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement('meta');
+        Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+        document.head.appendChild(el);
+      }
+      return el;
+    };
+    const ogTitle = ensureMeta('meta[property="og:title"]', { property: 'og:title' });
+    ogTitle.setAttribute('content', titles[lang]);
+
+    const ogDesc = ensureMeta('meta[property="og:description"]', { property: 'og:description' });
+    ogDesc.setAttribute('content', ogDescriptions[lang] || ogDescriptions.es);
   }, [lang]);
 
   return (
