@@ -35,10 +35,10 @@ export const content = {
     about: {
       title: '¿Quiénes Somos?',
       intro:
-        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra práctica combina mediación privada certificada con Fe Pública —que otorga validez legal y fuerza de cosa juzgada a los convenios— con estrategia jurídica integral. Nuestra mediación certificada en CDMX ofrece soluciones reales y somos especialistas en métodos alternativos de solución de conflictos. Así, logramos acuerdos ejecutables, reduciendo litigios innecesarios y maximizando la seguridad jurídica, los tiempos y los costos.',
+        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS es un despacho orientado a la resolución inteligente de controversias. Nuestra práctica combina mediación privada certificada con Fe Pública —que otorga validez legal y fuerza de cosa juzgada a los convenios— con estrategia jurídica integral. Nuestra mediación certificada en CDMX ofrece soluciones reales, somos especialistas en métodos alternativos de solución de conflictos y brindamos servicios legales especializados en mediación familiar y mercantil en Ciudad de México. Así, logramos acuerdos ejecutables, reduciendo litigios innecesarios y maximizando la seguridad jurídica, los tiempos y los costos.',
       philosophyTitle: 'Filosofía',
       philosophyText:
-        'Escuchamos, comprendemos intereses y diseñamos rutas de solución que equilibran lo humano y lo legal. Actuamos con ética, confidencialidad y transparencia.',
+        'Escuchamos, comprendemos intereses y diseñamos rutas de solución que equilibran lo humano y lo legal. Actuamos con ética, confidencialidad y transparencia, con abogados mediadores con fe pública y servicios legales especializados en mediación.',
       methodologyTitle: 'Metodología',
       methodology: [
         'Diagnóstico claro del conflicto y evaluación de riesgos y alternativas.',
@@ -142,6 +142,8 @@ export const content = {
     services: {
       title: 'Nuestros Servicios',
       summaryAria: 'Listado resumido de servicios',
+      lead:
+        'Servicios legales especializados en mediación certificada en CDMX: mediación familiar, mercantil, civil y bancaria con abogados mediadores con fe pública y solución profesional de conflictos.',
       summaryColumns: [
         [
           'Mediación privada certificada con fe pública',
@@ -407,7 +409,7 @@ export const content = {
     about: {
       title: 'About Us',
       intro:
-        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS is a firm focused on intelligent dispute resolution. Our practice combines certified private mediation with Public Faith—which grants legal validity and res judicata force to agreements—together with comprehensive legal strategy. Our certified mediation in Mexico City provides effective solutions and we specialize in alternative dispute resolution methods. This allows us to achieve enforceable agreements, reducing unnecessary litigation while maximizing legal certainty, time, and cost efficiency.',
+        'SOLIS CAMARA MEDIADORES ABOGADOS Y ASOCIADOS is a firm focused on intelligent dispute resolution. Our practice combines certified private mediation with Public Faith—which grants legal validity and res judicata force to agreements—together with comprehensive legal strategy. Our certified mediation in Mexico City provides effective solutions, we specialize in alternative dispute resolution methods, bilingual mediation services, and corporate and commercial mediation. This allows us to achieve enforceable agreements, reducing unnecessary litigation while maximizing legal certainty, time, and cost efficiency.',
       philosophyTitle: 'Philosophy',
       philosophyText:
         'We listen, understand interests, and design solution paths that balance the human and the legal. We act with ethics, confidentiality, and transparency.',
@@ -494,6 +496,8 @@ export const content = {
     services: {
       title: 'Our Services',
       summaryAria: 'Services summary list',
+      lead:
+        'Bilingual mediation services with certified mediation in Mexico City: corporate and commercial mediation, family, civil, and banking matters handled by legal mediation specialists using alternative dispute resolution methods.',
       summaryColumns: [
         [
           'Certified private mediation with Public Faith',

@@ -11,6 +11,7 @@ export default function Servicios() {
     <section id="servicios" className="servicios-section">
       <div className="servicios-container">
         <h2 className="servicios-title">{services.title}</h2>
+        {services.lead ? <p className="servicios-lead">{services.lead}</p> : null}
         <div className="servicios-list-grid" aria-label={services.summaryAria}>
           <ul className="servicios-list">
             {services.summaryColumns[0].map((item) => (

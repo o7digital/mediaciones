@@ -40,12 +40,9 @@ export default function Footer() {
         <section className="footer-seo">
           <h3>Servicios y Especialidades</h3>
           <p>
-            Mediación certificada CDMX • Mediación con fe pública • Mediación civil • Mediación mercantil •
-            Mediación familiar • Mediación bancaria • Solución de conflictos • Métodos alternativos de
-            solución de conflictos • Abogados mediadores • Despacho jurídico CDMX • Mediación privada •
-            Conciliación profesional • Mediación empresarial • Mediación en sector financiero • Mediación
-            profesional • Mediadores autorizados • Servicios legales en Ciudad de México • Acuerdos legales •
-            Consultoría legal • Mediación corporativa • Mediación comercial • Servicios jurídicos CDMX.
+            Mediación certificada CDMX • Mediación con fe pública • Mediación civil y mercantil • Mediación familiar •
+            Mediación bancaria y financiera • Métodos alternativos de solución de conflictos • Abogados mediadores •
+            Servicios legales CDMX
           </p>
         </section>
       )}
@@ -54,12 +51,8 @@ export default function Footer() {
         <section className="footer-seo">
           <h3>Services & Specialties</h3>
           <p>
-            Certified mediation Mexico City • Legal mediation services • Civil mediation • Commercial
-            mediation • Family mediation • Banking mediation • Professional conflict resolution • Alternative
-            dispute resolution • Mediation specialists • Legal consulting Mexico • Corporate mediation •
-            Private mediation • Professional mediators • Authorized mediators • Dispute resolution services •
-            Negotiation and settlement • Legal mediation experts • Bilingual mediation • Commercial conflict
-            resolution • Financial mediation • Mediation consulting • Legal services Mexico City.
+            Certified mediation Mexico City • Legal mediation services • Civil and commercial mediation • Family mediation •
+            Banking and financial mediation • Alternative dispute resolution • Mediation specialists • Legal services Mexico City
           </p>
         </section>
       )}
