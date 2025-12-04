@@ -1,6 +1,7 @@
 import React from 'react';
 import './Mediacion.css';
 import { useLanguage } from '../context/LanguageContext';
+import OptimizedImage from './OptimizedImage';
 
 export default function Mediacion() {
   const { copy, lang } = useLanguage();
@@ -13,7 +14,7 @@ export default function Mediacion() {
         <h2 className="mediacion-title">{mediation.title}</h2>
 
         <div className="mediacion-image-wrapper">
-          <img
+          <OptimizedImage
             src="/img/amina-lamediacion.jpg"
             alt={mediation.firstImageAlt}
             className="mediacion-image"
@@ -30,7 +31,7 @@ export default function Mediacion() {
         ))}
 
         <div className="mediacion-image-wrapper">
-          <img
+          <OptimizedImage
             src={conflictImage}
             alt={mediation.secondImageAlt}
             className="mediacion-image"

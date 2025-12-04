@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import './AssociatesCarousel.css';
+import OptimizedImage from './OptimizedImage';
 
 export default function AssociatesCarousel({
   associates = [],
@@ -59,7 +60,7 @@ export default function AssociatesCarousel({
             <div className="assoc-card" key={i}>
               <div className="assoc-card-inner">
                 <div className="assoc-photo">
-                  <img
+                  <OptimizedImage
                     src={a.photo}
                     alt={a.alt}
                     onError={(e) => { e.currentTarget.src = '/img/maria-del-pilar.jpg'; }}
