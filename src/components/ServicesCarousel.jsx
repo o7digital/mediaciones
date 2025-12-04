@@ -1,21 +1,12 @@
 import { useEffect, useMemo, useState } from 'react';
 import './ServicesCarousel.css';
 
-export default function ServicesCarousel({
-  items = [],
-  labels = {
-    viewMore: 'Ver más',
-    close: 'Cerrar',
-    prev: 'Anterior',
-    next: 'Siguiente',
-    aria: 'Carrusel de servicios',
-    page: 'Ir a la página',
-  },
-}) {
+export default function ServicesCarousel({ items = [] }) {
   const [index, setIndex] = useState(0);
   const [open, setOpen] = useState(null); // índice de item abierto en modal
   const [cardsPerView, setCardsPerView] = useState(4);
   const total = items.length;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const compute = () => {
@@ -52,8 +43,8 @@ export default function ServicesCarousel({
   }, [maxIndex, total]);
 
   return (
-    <div className="svc-carousel" role="region" aria-label={labels.aria} style={{ ['--cards-per-view']: cardsPerView }}>
-      <button className="svc-arrow left" onClick={prev} aria-label={labels.prev}>‹</button>
+    <div className="svc-carousel" role="region" aria-label="Carrusel de servicios" style={{ ['--cards-per-view']: cardsPerView }}>
+      <button className="svc-arrow left" onClick={prev} aria-label="Anterior">‹</button>
 
       <div className="svc-viewport">
         <div className="svc-track" style={{ transform: `translateX(-${(clampedIndex * 100) / cardsPerView}%)` }}>
@@ -67,7 +58,7 @@ export default function ServicesCarousel({
                     {Array.isArray(s.bullets) && s.bullets.length > 0 &&
                       s.bullets.map((b, bi) => <li key={bi}>{b}</li>)}
                   </ul>
-                  <button className="btn-ver-mas" onClick={() => setOpen(i)}>{labels.viewMore}</button>
+                  <button className="btn-ver-mas" onClick={() => setOpen(i)}>Ver más</button>
                 </div>
               </div>
             </div>
@@ -75,16 +66,11 @@ export default function ServicesCarousel({
         </div>
       </div>
 
-      <button className="svc-arrow right" onClick={next} aria-label={labels.next}>›</button>
+      <button className="svc-arrow right" onClick={next} aria-label="Siguiente">›</button>
 
       <div className="svc-dots">
         {Array.from({ length: pages }).map((_, p) => (
-          <button
-            key={p}
-            className={`svc-dot ${p === activePage ? 'active' : ''}`}
-            onClick={() => onDot(p)}
-            aria-label={`${labels.page || 'Ir a la página'} ${p + 1}`}
-          />
+          <button key={p} className={`svc-dot ${p === activePage ? 'active' : ''}`} onClick={() => onDot(p)} aria-label={`Ir a la página ${p + 1}`} />
         ))}
       </div>
 
@@ -97,12 +83,10 @@ export default function ServicesCarousel({
             aria-labelledby="svc-modal-title"
             onClick={(e) => e.stopPropagation()}
           >
-            <button className="svc-modal-close" aria-label={labels.close} onClick={() => setOpen(null)}>×</button>
+            <button className="svc-modal-close" aria-label="Cerrar" onClick={() => setOpen(null)}>×</button>
             <h3 id="svc-modal-title" className="svc-modal-title">{items[open]?.titulo}</h3>
             <div className="svc-modal-content">
-              {Array.isArray(items[open]?.modal) ? (
-                items[open].modal.map((para, idx) => <p key={idx}>{para}</p>)
-              ) : items[open]?.modal ? (
+              {items[open]?.modal ? (
                 items[open].modal
               ) : Array.isArray(items[open]?.detalles) ? (
                 items[open].detalles.map((p, pi) => <p key={pi}>{p}</p>)

@@ -1,18 +1,11 @@
 import { useEffect, useMemo, useState } from 'react';
 import './TestimonialsCarousel.css';
 
-export default function TestimonialsCarousel({
-  items = [],
-  labels = {
-    aria: 'Carrusel de testimonios',
-    prev: 'Anterior',
-    next: 'Siguiente',
-    page: 'Ir a la página',
-  },
-}) {
+export default function TestimonialsCarousel({ items = [] }) {
   const [index, setIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
   const total = items.length;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const compute = () => {
@@ -49,8 +42,8 @@ export default function TestimonialsCarousel({
   }, [maxIndex, total]);
 
   return (
-    <div className="tst-carousel" role="region" aria-label={labels.aria} style={{ ['--cards-per-view']: cardsPerView }}>
-      <button className="tst-arrow left" onClick={prev} aria-label={labels.prev}>‹</button>
+    <div className="tst-carousel" role="region" aria-label="Carrusel de testimonios" style={{ ['--cards-per-view']: cardsPerView }}>
+      <button className="tst-arrow left" onClick={prev} aria-label="Anterior">‹</button>
 
       <div className="tst-viewport">
         <div className="tst-track" style={{ transform: `translateX(-${(clampedIndex * 100) / cardsPerView}%)` }}>
@@ -66,16 +59,11 @@ export default function TestimonialsCarousel({
         </div>
       </div>
 
-      <button className="tst-arrow right" onClick={next} aria-label={labels.next}>›</button>
+      <button className="tst-arrow right" onClick={next} aria-label="Siguiente">›</button>
 
       <div className="tst-dots">
         {Array.from({ length: pages }).map((_, p) => (
-          <button
-            key={p}
-            className={`tst-dot ${p === activePage ? 'active' : ''}`}
-            onClick={() => onDot(p)}
-            aria-label={`${labels.page || 'Ir a la página'} ${p + 1}`}
-          />
+          <button key={p} className={`tst-dot ${p === activePage ? 'active' : ''}`} onClick={() => onDot(p)} aria-label={`Ir a la página ${p + 1}`} />
         ))}
       </div>
     </div>

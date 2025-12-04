@@ -1,10 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
-import { useLanguage } from "../context/LanguageContext";
 import "./HeroLawhere.css";
 
 export default function HeroLawhere() {
-  const { copy } = useLanguage();
-  const hero = copy.hero;
 
   // Gestion du changement de vidéo toutes les 10 secondes
   const videos = [
@@ -61,7 +58,7 @@ export default function HeroLawhere() {
           key={currentVideo}
         >
           <source src={currentVideo} type="video/mp4" />
-          {hero.videoFallback}
+          Tu navegador no soporta videos.
         </video>
       )}
 
@@ -75,25 +72,35 @@ export default function HeroLawhere() {
           <div className="hero-left">
             <div className="hero-box hero-mission-custom">
               <p className="hero-mission-title">
-                {hero.missionTitle}
+                CONFIANZA LEGAL, SOLUCIONES REALES
               </p>
             </div>
             {/* El segundo rectángulo se oculta en móvil por CSS */}
             <div className="hero-box hero-vision-custom">
               <p className="hero-vision-text">
-                {hero.visionText}
+                Desde la mediación hasta el litigio, brindamos soluciones legales integrales en lo civil, mercantil, fiscal y migratorio.
               </p>
             </div>
           </div>
 
           {/* Derecha */}
           <div className="hero-right">
-            {hero.stats.map((item) => (
-              <div className="stat" key={item.label}>
-                <h4>{item.value}</h4>
-                <p>{item.label}</p>
-              </div>
-            ))}
+            <div className="stat">
+              <h4>1500+</h4>
+              <p>Horas de audiencia</p>
+            </div>
+            <div className="stat">
+              <h4>150</h4>
+              <p>Clientes satisfechos</p>
+            </div>
+            <div className="stat">
+              <h4>95%</h4>
+              <p>de Mediaciones</p>
+            </div>
+            <div className="stat">
+              <h4>+35</h4>
+              <p>Años de experiencia</p>
+            </div>
           </div>
         </div>
       </div>
