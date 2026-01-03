@@ -38,6 +38,49 @@ export default function App() {
     }
     descTag.setAttribute('content', metaDescription);
 
+    // Update canonical URL
+    let canonicalTag = document.querySelector('link[rel="canonical"]');
+    if (!canonicalTag) {
+      canonicalTag = document.createElement('link');
+      canonicalTag.rel = 'canonical';
+      document.head.appendChild(canonicalTag);
+    }
+    canonicalTag.setAttribute('href', `https://scmabogados.com/${lang === 'en' ? 'en' : ''}`);
+
+    // Organization Schema
+    const organizationSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Solís Cámara Mediadores Abogados y Asociados',
+      url: 'https://scmabogados.com',
+      logo: 'https://scmabogados.com/img/logo.png',
+      description: ogDescriptions[lang] || ogDescriptions.es,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Ciudad de México',
+        addressRegion: 'CDMX',
+        addressCountry: 'MX',
+      },
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'customer service',
+        availableLanguage: ['es', 'en'],
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'México',
+      },
+    };
+
+    let orgScript = document.getElementById('organization-schema');
+    if (!orgScript) {
+      orgScript = document.createElement('script');
+      orgScript.id = 'organization-schema';
+      orgScript.type = 'application/ld+json';
+      document.head.appendChild(orgScript);
+    }
+    orgScript.textContent = JSON.stringify(organizationSchema);
+
     const faqEs = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
@@ -130,6 +173,20 @@ export default function App() {
 
     const ogDesc = ensureMeta('meta[property="og:description"]', { property: 'og:description' });
     ogDesc.setAttribute('content', ogDescriptions[lang] || ogDescriptions.es);
+
+    // Update Twitter Card meta tags
+    const ensureTwitterMeta = (name, content) => {
+      let el = document.querySelector(`meta[name="${name}"]`);
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute('name', name);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('content', content);
+    };
+    
+    ensureTwitterMeta('twitter:title', titles[lang]);
+    ensureTwitterMeta('twitter:description', ogDescriptions[lang] || ogDescriptions.es);
   }, [lang]);
 
   return (

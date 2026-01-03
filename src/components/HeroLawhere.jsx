@@ -74,9 +74,9 @@ export default function HeroLawhere() {
           {/* Izquierda */}
           <div className="hero-left">
             <div className="hero-box hero-mission-custom">
-              <p className="hero-mission-title">
+              <h1 className="hero-mission-title">
                 {hero.missionTitle}
-              </p>
+              </h1>
             </div>
             {/* El segundo rectángulo se oculta en móvil por CSS */}
             <div className="hero-box hero-vision-custom">
