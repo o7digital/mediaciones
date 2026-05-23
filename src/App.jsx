@@ -45,7 +45,21 @@ export default function App() {
       canonicalTag.rel = 'canonical';
       document.head.appendChild(canonicalTag);
     }
-    canonicalTag.setAttribute('href', `https://scmabogados.com/${lang === 'en' ? 'en' : ''}`);
+    canonicalTag.setAttribute('href', lang === 'en' ? 'https://scmabogados.com/en' : 'https://scmabogados.com/');
+
+    const ensureAlternate = (hreflang, href) => {
+      let el = document.querySelector(`link[rel="alternate"][hreflang="${hreflang}"]`);
+      if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', 'alternate');
+        el.setAttribute('hreflang', hreflang);
+        document.head.appendChild(el);
+      }
+      el.setAttribute('href', href);
+    };
+    ensureAlternate('es-MX', 'https://scmabogados.com/');
+    ensureAlternate('en', 'https://scmabogados.com/en');
+    ensureAlternate('x-default', 'https://scmabogados.com/');
 
     // Organization Schema
     const organizationSchema = {
