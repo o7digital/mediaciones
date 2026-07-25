@@ -2,9 +2,55 @@ import React from 'react';
 import './Footer.css';
 import { useLanguage } from '../context/LanguageContext';
 
+const keywordRows = {
+  es: [
+    [
+      'mediacion certificada CDMX',
+      'mediacion con fe publica Mexico CDMX',
+      'mediacion civil y mercantil Mexico CDMX',
+      'mediacion familiar Mexico CDMX',
+      'mediacion bancaria Mexico CDMX',
+      'mediacion financiera Mexico CDMX',
+    ],
+    [
+      'metodos alternativos de solucion de conflictos Mexico CDMX',
+      'abogados mediadores Mexico CDMX',
+      'servicios legales CDMX',
+      'asesoria legal CDMX',
+      'solucion de conflictos Mexico CDMX',
+      'mediacion privada Mexico CDMX',
+    ],
+    [
+      'mediadores certificados Mexico CDMX',
+      'mediacion corporativa Mexico CDMX',
+      'mediacion familiar CDMX',
+      'mediacion mercantil CDMX',
+      'despacho de mediacion Mexico CDMX',
+      'Solis Camara Mediadores Abogados y Asociados Mexico CDMX',
+    ],
+  ],
+  en: [
+    [
+      'certified mediation Mexico City',
+      'legal mediation services Mexico CDMX',
+      'alternative dispute resolution Mexico CDMX',
+      'civil and commercial mediation Mexico CDMX',
+      'family mediation Mexico CDMX',
+    ],
+    [
+      'banking and financial mediation Mexico CDMX',
+      'mediation specialists Mexico CDMX',
+      'legal services Mexico City',
+      'private mediation Mexico CDMX',
+      'conflict resolution Mexico CDMX',
+    ],
+  ],
+};
+
 export default function Footer() {
   const { copy, lang } = useLanguage();
   const footer = copy.footer;
+  const rows = keywordRows[lang] || keywordRows.es;
 
   return (
     <footer className="footer">
@@ -36,32 +82,17 @@ export default function Footer() {
         </div>
       </div>
 
-      {lang === 'es' && (
-        <section className="footer-seo">
-          <h3>Servicios y Especialidades</h3>
-          <p>
-            Mediación certificada CDMX • Mediación con fe pública • Mediación civil y mercantil • Mediación familiar •
-            Mediación bancaria y financiera • Métodos alternativos de solución de conflictos • Abogados mediadores •
-            Servicios legales CDMX
-          </p>
-        </section>
-      )}
-
-      {lang === 'en' && (
-        <section className="footer-seo">
-          <h3>Services & Specialties</h3>
-          <p>
-            Certified mediation Mexico City • Legal mediation services • Civil and commercial mediation • Family mediation •
-            Banking and financial mediation • Alternative dispute resolution • Mediation specialists • Legal services Mexico City
-          </p>
-        </section>
-      )}
-
       <div className="footer-bottom">
         <p>{footer.rights}
           <a href="/aviso-privacidad.html" target="_blank" rel="noopener noreferrer"> {footer.privacy}</a>
         </p>
       </div>
+
+      <section className="footer-keywords" aria-label="SEO keywords">
+        {rows.map((row) => (
+          <p key={row.join('|')}>{row.join(' • ')}</p>
+        ))}
+      </section>
     </footer>
   );
 }
