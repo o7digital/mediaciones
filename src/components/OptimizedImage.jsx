@@ -7,7 +7,7 @@ export default function OptimizedImage({ src, alt, className, ...props }) {
   return (
     <picture>
       <source srcSet={webpSrc} type="image/webp" />
-      <img src={src} alt={alt} className={className} {...props} />
+      <img src={src} alt={alt} className={className} loading="lazy" decoding="async" {...props} />
     </picture>
   );
 }

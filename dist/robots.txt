@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mediaciones.vercel.app/sitemap.xml
+Sitemap: https://scmabogados.com/sitemap.xml
