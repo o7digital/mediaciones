@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 
 export default function HeroVideo() {
   const videos = [
-    "/video/mediacion.mp4",
-    "/video/mediacion2.mp4",
-    "/video/mediacion3.mp4"
+    "/video/mediacion_compressed.mp4",
+    "/video/mediacion2_compressed.mp4"
   ];
 
   const [current, setCurrent] = useState(0);
@@ -18,19 +17,17 @@ export default function HeroVideo() {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {videos.map((video, index) => (
-        <video
-          key={index}
-          src={video}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className={`absolute w-full h-full object-cover transition-opacity duration-1000 ${
-            index === current ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ))}
+      <video
+        key={videos[current]}
+        src={videos[current]}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        poster="/img/mobile.webp"
+        className="absolute w-full h-full object-cover transition-opacity duration-1000 opacity-100"
+      />
 
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">

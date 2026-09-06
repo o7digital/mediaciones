@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { useLanguage } from '../context/LanguageContext';
+import { HOME_ROUTES } from '../routes';
 
 const keywordRows = {
   es: [
@@ -50,6 +51,7 @@ const keywordRows = {
 export default function Footer() {
   const { copy, lang } = useLanguage();
   const footer = copy.footer;
+  const homePath = HOME_ROUTES[lang];
   const rows = keywordRows[lang] || keywordRows.es;
 
   return (
@@ -65,20 +67,26 @@ export default function Footer() {
         <div className="footer-col">
           <h4>{footer.linksTitle}</h4>
           <ul>
-            <li><a href="#home">{footer.nav.home}</a></li>
-            <li><a href="#quienes-somos">{footer.nav.about}</a></li>
-            <li><a href="#mediacion">{footer.nav.mediation}</a></li>
-            <li><a href="#servicios">{footer.nav.services}</a></li>
-            <li><a href="#contacto">{footer.nav.contact}</a></li>
+            <li><a href={`${homePath}#home`}>{footer.nav.home}</a></li>
+            <li><a href={`${homePath}#quienes-somos`}>{footer.nav.about}</a></li>
+            <li><a href={`${homePath}#mediacion`}>{footer.nav.mediation}</a></li>
+            <li><a href={`${homePath}#servicios`}>{footer.nav.services}</a></li>
+            <li><a href={`${homePath}#contacto`}>{footer.nav.contact}</a></li>
           </ul>
         </div>
 
         {/* Columna derecha */}
         <div className="footer-col">
           <h4>{footer.contactTitle}</h4>
-          <p>Tel: +52 55 4616 7798</p>
-          <p>Email: <a href="mailto:info@scmabogados.com">info@scmabogados.com</a></p>
-          <p>Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX</p>
+          <address>
+            <p>Tel: <a href="tel:+525546167798">+52 55 4616 7798</a></p>
+            <p>Email: <a href="mailto:info@scmabogados.com">info@scmabogados.com</a></p>
+            <p>
+              <a href="https://www.google.com/maps/search/?api=1&query=R%C3%ADo+P%C3%A1nuco+43%2C+Col.+Renacimiento%2C+Cuauht%C3%A9moc%2C+CDMX" target="_blank" rel="noopener noreferrer">
+                Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX
+              </a>
+            </p>
+          </address>
         </div>
       </div>
 

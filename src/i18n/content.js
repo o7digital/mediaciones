@@ -21,7 +21,7 @@ export const content = {
       },
     },
     hero: {
-      missionTitle: 'CONFIANZA LEGAL, SOLUCIONES REALES',
+      missionTitle: 'MEDIACIÓN PRIVADA CERTIFICADA Y SERVICIOS LEGALES EN CDMX',
       visionText:
         'Desde la mediación hasta el litigio, brindamos soluciones legales integrales en lo civil, mercantil, fiscal y migratorio.',
       stats: [
@@ -110,7 +110,7 @@ export const content = {
       certifiedTitle: 'Mediación Privada Certificada',
       certifiedIntro: [
         'Es un proceso alternativo de solución al conflicto que fortalece las relaciones a mediano y largo plazo que deriva en una sensación de satisfacción permanente.',
-        'Actualmente en nuestro país en el año 2018 el artículo 17 constitucional fue reformado e incorpora los Mecanismos Alternativos de Solución de Controversias, dándole el rango de un mejor acceso a la justicia y potencializando los derechos humanos.',
+        'Desde la reforma publicada el 18 de junio de 2008, el artículo 17 constitucional prevé mecanismos alternativos de solución de controversias como una vía de acceso a la justicia.',
         'En la Ciudad de México el Centro de Justicia Alternativa ha certificado a mediadores privados capacitados para llevar a cabo este procedimiento y autentificar que los acuerdos a los que lleguen las partes sean vinculantes y tengan fuerza de cosa juzgada. También los acuerdos se elevan a cosa juzgada y se ejecutan en vía de apremio según la Ley de Justicia Alternativa en sus artículos 38 y 50.',
       ],
       certifiedBullets: [
@@ -118,6 +118,11 @@ export const content = {
         'A diferencia de la resolución judicial, la mediación permite el restablecimiento de la relación entre las partes, previniendo conflictos futuros.',
         'Según el artículo 38 y 50 de la Ley de Justicia Alternativa de la Ciudad de México, la mediación tiene carácter de cosa juzgada, lo que garantiza su obligatoriedad.',
       ],
+      officialSourcesTitle: 'Fuentes oficiales',
+      officialSources: {
+        constitution: 'Historial de reformas al artículo 17 constitucional',
+        mediation: 'Centro de Justicia Alternativa de la Ciudad de México',
+      },
       timeline: {
         alt: 'Escala que va de guerra a paz ilustrando el avance hacia la colaboración',
         background: '/img/conflicto.jpg',
@@ -354,7 +359,7 @@ export const content = {
       mapAria: 'Mapa de la dirección Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX',
     },
     footer: {
-      brand: 'Mediaciones',
+      brand: 'Solís Cámara',
       description:
         'Soluciones legales efectivas a través de mediación privada certificada, reduciendo tiempos, costos y preservando relaciones.',
       linksTitle: 'Enlaces',
@@ -366,7 +371,7 @@ export const content = {
         services: 'Servicios',
         contact: 'Contacto',
       },
-      rights: '© 2025 Mediaciones. Todos los derechos reservados.',
+      rights: '© 2026 Solís Cámara. Todos los derechos reservados.',
       privacy: 'Aviso de Privacidad',
     },
     cookie: {
@@ -374,7 +379,7 @@ export const content = {
       message:
         'Usamos cookies para mejorar tu experiencia, analizar el tráfico y personalizar contenido. Consulta el Aviso de Privacidad para más información.',
       accept: 'Aceptar',
-      moreInfo: 'Más información',
+      moreInfo: 'Consultar el aviso de privacidad',
       privacy: 'Aviso de Privacidad',
     },
   },
@@ -395,7 +400,7 @@ export const content = {
       },
     },
     hero: {
-      missionTitle: 'LEGAL TRUST, REAL SOLUTIONS',
+      missionTitle: 'CERTIFIED MEDIATION AND LEGAL SERVICES IN MEXICO CITY',
       visionText:
         'From mediation to litigation, we deliver comprehensive legal solutions in civil, commercial, tax, and immigration matters.',
       stats: [
@@ -484,7 +489,7 @@ export const content = {
       certifiedTitle: 'Certified Private Mediation',
       certifiedIntro: [
         'An alternative dispute-resolution process that strengthens medium- and long-term relationships and leads to lasting satisfaction.',
-        'In Mexico, Article 17 of the Constitution was reformed in 2018 to incorporate Alternative Dispute Resolution mechanisms, broadening access to justice and reinforcing human rights.',
+        'Since the reform published on June 18, 2008, Article 17 of the Mexican Constitution has provided for alternative dispute resolution mechanisms as a path to justice.',
         'In Mexico City, the Alternative Justice Center certifies private mediators to carry out this procedure and authenticate agreements so they are binding and have res judicata effect. Agreements can also be enforced through summary proceedings under the Alternative Justice Law (Articles 38 and 50).',
       ],
       certifiedBullets: [
@@ -492,6 +497,11 @@ export const content = {
         'Unlike judicial resolution, mediation allows the relationship between the parties to be restored, preventing future conflicts.',
         'Under Articles 38 and 50 of the Mexico City Alternative Justice Law, mediation carries res judicata effect, guaranteeing its enforceability.',
       ],
+      officialSourcesTitle: 'Official sources',
+      officialSources: {
+        constitution: 'Amendment history for Article 17 of the Mexican Constitution',
+        mediation: 'Mexico City Alternative Justice Center',
+      },
     },
     services: {
       title: 'Our Services',
@@ -708,7 +718,7 @@ export const content = {
       mapAria: 'Map of Río Pánuco 43, Col. Renacimiento, Cuauhtémoc, CDMX',
     },
     footer: {
-      brand: 'Mediaciones',
+      brand: 'Solís Cámara',
       description:
         'Effective legal solutions through certified private mediation, reducing time, costs, and preserving relationships.',
       linksTitle: 'Links',
@@ -720,7 +730,7 @@ export const content = {
         services: 'Services',
         contact: 'Contact',
       },
-      rights: '© 2025 Mediaciones. All rights reserved.',
+      rights: '© 2026 Solís Cámara. All rights reserved.',
       privacy: 'Privacy Notice',
     },
     cookie: {
@@ -728,7 +738,7 @@ export const content = {
       message:
         'We use cookies to improve your experience, analyze traffic, and personalize content. See the Privacy Notice for more information.',
       accept: 'Accept',
-      moreInfo: 'More info',
+      moreInfo: 'Read our privacy notice',
       privacy: 'Privacy Notice',
     },
   },

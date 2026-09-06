@@ -23,22 +23,37 @@ export default function Contact() {
         <div className="contact-container">
           <h2 className="contact-title">{contact.title}</h2>
           <p className="contact-description">{contact.description}</p>
-          <form className="contact-form">
-            <input 
-              type="text" 
+          <form className="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="form-honeypot">
+              <label>Do not fill this out: <input name="bot-field" /></label>
+            </p>
+            <label className="sr-only" htmlFor="contact-name">{contact.placeholders.name}</label>
+            <input
+              id="contact-name"
+              name="name"
+              autoComplete="name"
+              type="text"
               placeholder={contact.placeholders.name}
-              required 
-            />
-            <input 
-              type="email" 
-              placeholder={contact.placeholders.email}
-              required 
-            />
-            <textarea 
-              placeholder={contact.placeholders.message}
-              rows="5" 
               required
-            ></textarea>
+            />
+            <label className="sr-only" htmlFor="contact-email">{contact.placeholders.email}</label>
+            <input
+              id="contact-email"
+              name="email"
+              autoComplete="email"
+              type="email"
+              placeholder={contact.placeholders.email}
+              required
+            />
+            <label className="sr-only" htmlFor="contact-message">{contact.placeholders.message}</label>
+            <textarea
+              id="contact-message"
+              name="message"
+              placeholder={contact.placeholders.message}
+              rows="5"
+              required
+            />
             <button type="submit" className="contact-btn">{contact.button}</button>
           </form>
         </div>

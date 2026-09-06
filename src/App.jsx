@@ -4,12 +4,19 @@ import HeroLawhere from './components/HeroLawhere';
 import QuienesSomos from './components/QuienesSomos';
 import Mediacion from './components/Mediacion';
 import Servicios from './components/Servicios';
-import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
+import ServicePage from './components/ServicePage';
 import { useLanguage } from './context/LanguageContext';
-import { SITE_URL, SOCIAL_IMAGE, alternates, faqSchema, organizationSchema, pageSeo } from './seo';
+import {
+  SOCIAL_IMAGE,
+  getAlternatesForRoute,
+  getSeoForRoute,
+  getServiceSchema,
+  organizationSchema,
+} from './seo';
+import { resolveRoute } from './routes';
 import './index.css';
 
 function ensureElement(selector, createElement) {
@@ -40,12 +47,16 @@ function setJsonLd(id, data) {
   script.textContent = JSON.stringify(data);
 }
 
-export default function App() {
+function removeElement(selector) {
+  document.querySelector(selector)?.remove();
+}
+
+export default function App({ pathname }) {
   const { lang } = useLanguage();
+  const route = resolveRoute(pathname || (typeof window !== 'undefined' ? window.location.pathname : '/'));
 
   useEffect(() => {
-    const seo = pageSeo[lang] || pageSeo.es;
-    const canonicalUrl = `${SITE_URL}${seo.canonicalPath}`;
+    const seo = getSeoForRoute({ ...route, lang });
 
     document.documentElement.lang = lang;
     document.title = seo.title;
@@ -56,9 +67,10 @@ export default function App() {
       link.rel = 'canonical';
       return link;
     });
-    canonicalTag.setAttribute('href', canonicalUrl);
+    canonicalTag.setAttribute('href', seo.canonicalUrl);
 
-    alternates.forEach(({ hreflang, href }) => {
+    document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((element) => element.remove());
+    getAlternatesForRoute(route).forEach(({ hreflang, href }) => {
       const link = ensureElement(`link[rel="alternate"][hreflang="${hreflang}"]`, () => {
         const element = document.createElement('link');
         element.rel = 'alternate';
@@ -69,34 +81,41 @@ export default function App() {
     });
 
     setMeta('meta[property="og:title"]', { property: 'og:title' }, seo.title);
-    setMeta('meta[property="og:description"]', { property: 'og:description' }, seo.ogDescription);
+    setMeta('meta[property="og:description"]', { property: 'og:description' }, seo.ogDescription || seo.description);
     setMeta('meta[property="og:type"]', { property: 'og:type' }, 'website');
-    setMeta('meta[property="og:url"]', { property: 'og:url' }, canonicalUrl);
+    setMeta('meta[property="og:url"]', { property: 'og:url' }, seo.canonicalUrl);
     setMeta('meta[property="og:image"]', { property: 'og:image' }, SOCIAL_IMAGE);
     setMeta('meta[property="og:image:width"]', { property: 'og:image:width' }, '1200');
     setMeta('meta[property="og:image:height"]', { property: 'og:image:height' }, '630');
+    setMeta('meta[property="og:image:alt"]', { property: 'og:image:alt' }, 'Solís Cámara Mediadores Abogados y Asociados');
+    setMeta('meta[property="og:site_name"]', { property: 'og:site_name' }, 'Solís Cámara');
     setMeta('meta[property="og:locale"]', { property: 'og:locale' }, seo.locale);
     setMeta('meta[name="twitter:card"]', { name: 'twitter:card' }, 'summary_large_image');
     setMeta('meta[name="twitter:title"]', { name: 'twitter:title' }, seo.title);
-    setMeta('meta[name="twitter:description"]', { name: 'twitter:description' }, seo.ogDescription);
+    setMeta('meta[name="twitter:description"]', { name: 'twitter:description' }, seo.ogDescription || seo.description);
     setMeta('meta[name="twitter:image"]', { name: 'twitter:image' }, SOCIAL_IMAGE);
 
     setJsonLd('organization-schema', organizationSchema);
-    setJsonLd('faq-schema', faqSchema[lang] || faqSchema.es);
-  }, [lang]);
+    const serviceSchema = getServiceSchema(route);
+    if (serviceSchema) setJsonLd('service-schema', serviceSchema);
+    else removeElement('#service-schema');
+  }, [lang, pathname]);
+
+  if (route.type === 'service') {
+    return <ServicePage route={route} />;
+  }
 
   return (
     <>
-      <Header />
+      <Header route={route} />
       <main>
         <HeroLawhere />
         <QuienesSomos />
         <Mediacion />
         <Servicios />
-        <Testimonials />
         <Contact />
-        <Footer />
       </main>
+      <Footer route={route} />
       <CookieConsent />
     </>
   );

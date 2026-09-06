@@ -3,6 +3,7 @@ import './ServicesCarousel.css';
 
 export default function ServicesCarousel({
   items = [],
+  links = [],
   labels = {
     viewMore: 'Ver más',
     close: 'Cerrar',
@@ -13,7 +14,6 @@ export default function ServicesCarousel({
   },
 }) {
   const [index, setIndex] = useState(0);
-  const [open, setOpen] = useState(null); // índice de item abierto en modal
   const [cardsPerView, setCardsPerView] = useState(4);
   const total = items.length;
 
@@ -61,13 +61,13 @@ export default function ServicesCarousel({
             <div className="svc-card" key={i}>
               <div className="svc-card-inner">
                 <div className="svc-info">
-                  <h3 className="svc-title">{s.titulo}</h3>
+                  <h3 className="svc-title"><a href={links[i]}>{s.titulo}</a></h3>
                   <ul className="svc-list">
                     {s.desc ? <li>{s.desc}</li> : null}
                     {Array.isArray(s.bullets) && s.bullets.length > 0 &&
                       s.bullets.map((b, bi) => <li key={bi}>{b}</li>)}
                   </ul>
-                  <button className="btn-ver-mas" onClick={() => setOpen(i)}>{labels.viewMore}</button>
+                  <a className="btn-ver-mas" href={links[i]}>{labels.viewMore}</a>
                 </div>
               </div>
             </div>
@@ -88,31 +88,6 @@ export default function ServicesCarousel({
         ))}
       </div>
 
-      {open !== null && (
-        <div className="svc-modal-backdrop" onClick={() => setOpen(null)}>
-          <div
-            className="svc-modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="svc-modal-title"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="svc-modal-close" aria-label={labels.close} onClick={() => setOpen(null)}>×</button>
-            <h3 id="svc-modal-title" className="svc-modal-title">{items[open]?.titulo}</h3>
-            <div className="svc-modal-content">
-              {Array.isArray(items[open]?.modal) ? (
-                items[open].modal.map((para, idx) => <p key={idx}>{para}</p>)
-              ) : items[open]?.modal ? (
-                items[open].modal
-              ) : Array.isArray(items[open]?.detalles) ? (
-                items[open].detalles.map((p, pi) => <p key={pi}>{p}</p>)
-              ) : (
-                <p>{items[open]?.detalles || items[open]?.desc}</p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

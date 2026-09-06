@@ -1,27 +1,27 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import "./HeroLawhere.css";
+
+const VIDEOS = [
+  '/video/mediacion_compressed.mp4',
+  '/video/mediacion2_compressed.mp4',
+];
 
 export default function HeroLawhere() {
   const { copy } = useLanguage();
   const hero = copy.hero;
 
   // Gestion du changement de vidéo toutes les 10 secondes
-  const videos = [
-    "video/mediacion.mp4",
-    "video/mediacion2.mp4"
-  ];
-  const videoRefs = [useRef(null), useRef(null)];
   const [current, setCurrent] = useState(0);
-  const currentVideo = videos[current];
-  const [isMobile, setIsMobile] = useState(false);
+  const currentVideo = VIDEOS[current];
+  const [isDesktop, setIsDesktop] = useState(false);
 
   // Detecta mobile por media query y escucha cambios de tamaño
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
-    const apply = () => setIsMobile(mq.matches);
+    const apply = () => setIsDesktop(!mq.matches);
     apply();
-    const handler = (e) => setIsMobile(e.matches);
+    const handler = (e) => setIsDesktop(!e.matches);
     if (mq.addEventListener) mq.addEventListener('change', handler);
     else mq.addListener(handler); // fallback
     return () => {
@@ -31,33 +31,28 @@ export default function HeroLawhere() {
   }, []);
 
   useEffect(() => {
-    if (isMobile) return; // no preloads ni intervalos en móvil
-    // Précharge la prochaine vidéo
-    const nextIndex = (current + 1) % videos.length;
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'video';
-    link.href = videos[nextIndex];
-    document.head.appendChild(link);
+    if (!isDesktop) return undefined;
 
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % videos.length);
+      setCurrent((prev) => (prev + 1) % VIDEOS.length);
     }, 10000);
     return () => {
       clearInterval(interval);
-      document.head.removeChild(link);
     };
-  }, [current, videos, isMobile]);
+  }, [isDesktop]);
 
   return (
     <section className="hero-lawhere" id="home">
       {/* Video de fondo (solo desktop/tablet) */}
-      {!isMobile && (
+      {isDesktop && (
         <video
           className="hero-video"
           autoPlay
           muted
           loop
+          playsInline
+          preload="metadata"
+          poster="/img/mobile.webp"
           key={currentVideo}
         >
           <source src={currentVideo} type="video/mp4" />

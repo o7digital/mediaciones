@@ -84,12 +84,13 @@
 
 .assoc-dots { text-align: center; margin-top: 0.75rem; }
 .assoc-dot {
-  width: 10px;
-  height: 10px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #cfd8e3;
   border: none;
-  margin: 0 4px;
+  margin: 0 3px;
+  box-shadow: inset 0 0 0 6px #fff;
   cursor: pointer;
 }
 .assoc-dot.active { background: #003366; }

@@ -38,10 +38,9 @@
   cursor: pointer;
 }
 .cookie-btn.primary:hover { background: #002244; }
-.cookie-link { font-size: 0.95rem; }
+.cookie-link { font-size: 0.95rem; text-decoration: underline; text-underline-offset: 0.18em; }
 
 @media (max-width: 768px) {
   .cookie-content { flex-direction: column; align-items: stretch; }
   .cookie-actions { justify-content: flex-start; }
 }
-

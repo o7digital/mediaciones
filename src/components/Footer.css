@@ -24,6 +24,9 @@
   line-height: 1.4;
 }
 
+.footer-col address { font-style: normal; }
+.footer-col address a { color: #fff; text-decoration: underline; text-underline-offset: 0.18em; }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -52,6 +55,8 @@
 .footer-bottom a {
   color: #4da6ff;
   margin-left: 5px;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .footer-bottom a:hover {
@@ -82,4 +87,5 @@
   .footer-keywords {
     font-size: 0.68rem;
   }
+
 }

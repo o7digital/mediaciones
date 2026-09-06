@@ -2,9 +2,10 @@ import React from 'react';
 import './Servicios.css';
 import ServicesCarousel from './ServicesCarousel';
 import { useLanguage } from '../context/LanguageContext';
+import { SERVICE_ROUTES } from '../routes';
 
 export default function Servicios() {
-  const { copy } = useLanguage();
+  const { copy, lang } = useLanguage();
   const services = copy.services;
 
   return (
@@ -24,7 +25,11 @@ export default function Servicios() {
             ))}
           </ul>
         </div>
-        <ServicesCarousel items={services.items} labels={services.labels} />
+        <ServicesCarousel
+          items={services.items}
+          labels={services.labels}
+          links={SERVICE_ROUTES.map((route) => route[lang])}
+        />
       </div>
     </section>
   );

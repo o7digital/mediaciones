@@ -1,45 +1,43 @@
 import React, { useState } from 'react';
-import { FaFacebookF, FaLinkedinIn, FaTiktok } from 'react-icons/fa';
 import { useLanguage } from '../context/LanguageContext';
+import { getLanguagePath } from '../routes';
 import './Header.css';
 
-export default function Header() {
+export default function Header({ route }) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { lang, setLang, languages, copy } = useLanguage();
+  const { lang, languages, copy } = useLanguage();
   const nav = copy.header.nav;
   const menuLabel = menuOpen ? copy.header.menuLabels.close : copy.header.menuLabels.open;
+  const homePath = getLanguagePath({ type: 'home' }, lang);
 
   return (
     <header className="header">
       <div className="header-container">
-        <h1 className="logo">{copy.header.logo}</h1>
+        <a className="logo" href={homePath} aria-label={`${copy.header.logo} — ${nav.home}`}>
+          {copy.header.logo}
+        </a>
 
         <div className="header-actions">
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>{nav.home}</a>
-            <a href="#quienes-somos" onClick={() => setMenuOpen(false)}>{nav.about}</a>
-            <a href="#mediacion" onClick={() => setMenuOpen(false)}>{nav.mediation}</a>
-            <a href="#servicios" onClick={() => setMenuOpen(false)}>{nav.services}</a>
-            <a href="#contacto" onClick={() => setMenuOpen(false)}>{nav.contact}</a>
+            <a href={`${homePath}#home`} onClick={() => setMenuOpen(false)}>{nav.home}</a>
+            <a href={`${homePath}#quienes-somos`} onClick={() => setMenuOpen(false)}>{nav.about}</a>
+            <a href={`${homePath}#mediacion`} onClick={() => setMenuOpen(false)}>{nav.mediation}</a>
+            <a href={`${homePath}#servicios`} onClick={() => setMenuOpen(false)}>{nav.services}</a>
+            <a href={`${homePath}#contacto`} onClick={() => setMenuOpen(false)}>{nav.contact}</a>
           </nav>
-
-          <div className="social-icons">
-            <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-            <a href="#" aria-label="LinkedIn"><FaLinkedinIn /></a>
-            <a href="#" aria-label="TikTok"><FaTiktok /></a>
-          </div>
 
           <div className="lang-switch" aria-label={copy.header.languageLabel}>
             {languages.map((option) => (
-              <button
+              <a
                 key={option.code}
-                type="button"
                 className={`lang-btn ${lang === option.code ? 'active' : ''}`}
-                onClick={() => setLang(option.code)}
-                aria-pressed={lang === option.code}
+                href={getLanguagePath(route, option.code)}
+                hrefLang={option.code === 'es' ? 'es-MX' : 'en'}
+                lang={option.code}
+                aria-current={lang === option.code ? 'page' : undefined}
               >
                 {option.label}
-              </button>
+              </a>
             ))}
           </div>
 
@@ -57,22 +55,23 @@ export default function Header() {
         <div className="mobile-menu">
           <div className="lang-switch" aria-label={copy.header.languageLabel}>
             {languages.map((option) => (
-              <button
+              <a
                 key={option.code}
-                type="button"
                 className={`lang-btn ${lang === option.code ? 'active' : ''}`}
-                onClick={() => setLang(option.code)}
-                aria-pressed={lang === option.code}
+                href={getLanguagePath(route, option.code)}
+                hrefLang={option.code === 'es' ? 'es-MX' : 'en'}
+                lang={option.code}
+                aria-current={lang === option.code ? 'page' : undefined}
               >
                 {option.label}
-              </button>
+              </a>
             ))}
           </div>
-          <a href="#home" onClick={() => setMenuOpen(false)}>{nav.home}</a>
-          <a href="#quienes-somos" onClick={() => setMenuOpen(false)}>{nav.about}</a>
-          <a href="#mediacion" onClick={() => setMenuOpen(false)}>{nav.mediation}</a>
-          <a href="#servicios" onClick={() => setMenuOpen(false)}>{nav.services}</a>
-          <a href="#contacto" onClick={() => setMenuOpen(false)}>{nav.contact}</a>
+          <a href={`${homePath}#home`} onClick={() => setMenuOpen(false)}>{nav.home}</a>
+          <a href={`${homePath}#quienes-somos`} onClick={() => setMenuOpen(false)}>{nav.about}</a>
+          <a href={`${homePath}#mediacion`} onClick={() => setMenuOpen(false)}>{nav.mediation}</a>
+          <a href={`${homePath}#servicios`} onClick={() => setMenuOpen(false)}>{nav.services}</a>
+          <a href={`${homePath}#contacto`} onClick={() => setMenuOpen(false)}>{nav.contact}</a>
         </div>
       )}
     </header>

@@ -46,6 +46,8 @@
 
 .svc-info { display: flex; flex-direction: column; justify-content: space-between; text-align: left; }
 .svc-title { font-size: 2rem; margin: 0 0 0.75rem 0; color: #003366; }
+.svc-title a { color: inherit; text-decoration: none; }
+.svc-title a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .svc-desc { display: none; }
 .svc-list { margin: 0 0 1rem 1.1rem; padding: 0; list-style: disc; color: #333; }
 .svc-list li { font-size: 1.05rem; line-height: 1.6; margin-bottom: 0.35rem; text-align: left; }
@@ -56,12 +58,13 @@
   /* Mismo tamaño y centrado */
   width: 4cm;
   display: inline-block;
+  text-decoration: none;
   text-align: center;
   align-self: center;
 }
 
 .svc-dots { text-align: center; margin-top: 0.75rem; }
-.svc-dot { width: 10px; height: 10px; border-radius: 50%; background: #cfd8e3; border: none; margin: 0 4px; cursor: pointer; }
+.svc-dot { width: 24px; height: 24px; border-radius: 50%; background: #cfd8e3; border: none; margin: 0 3px; cursor: pointer; box-shadow: inset 0 0 0 6px #fff; }
 .svc-dot.active { background: #003366; }
 
 /* Modal de detalle */

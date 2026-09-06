@@ -63,6 +63,8 @@ export default function AssociatesCarousel({
                   <OptimizedImage
                     src={a.photo}
                     alt={a.alt}
+                    webpSrcSet={a.photo === '/img/Emma.jpeg' ? '/img/Emma-400.webp 400w, /img/Emma.webp 845w' : undefined}
+                    sizes="(max-width: 639px) 88vw, (max-width: 1023px) 44vw, 280px"
                     onError={(e) => { e.currentTarget.src = '/img/maria-del-pilar.jpg'; }}
                   />
                 </div>
