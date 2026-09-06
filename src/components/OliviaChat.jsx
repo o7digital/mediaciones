@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import './OliviaChat.css';
 import { useLanguage } from '../context/LanguageContext';
 
-const API_URL = import.meta.env.VITE_OLIVIA_API_URL;
+const API_BASE_URL = (import.meta.env.VITE_OLIVIA_API_URL || 'https://olivia-ai.o7digital.com').replace(/\/$/, '');
+const API_URL = API_BASE_URL.endsWith('/api/olivia/chat')
+  ? API_BASE_URL
+  : `${API_BASE_URL}/api/olivia/chat`;
+const IDENTITY_URL = `${API_BASE_URL.replace(/\/api\/olivia\/chat$/, '')}/api/widget/identity`;
 const CLIENT_CODE = import.meta.env.VITE_OLIVIA_CLIENT_CODE || 'scmabogados';
 
 const copy = {
@@ -41,6 +45,7 @@ export default function OliviaChat() {
   const [accepted, setAccepted] = useState(false);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [widgetIdentity, setWidgetIdentity] = useState('');
   const [messages, setMessages] = useState([{ role: 'assistant', content: text.welcome }]);
   const visitorId = useRef('');
 
@@ -51,6 +56,20 @@ export default function OliviaChat() {
     } catch (_) {
       setAccepted(false);
     }
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(IDENTITY_URL, { cache: 'no-store' })
+      .then((response) => response.json().then((data) => ({ response, data })))
+      .then(({ response, data }) => {
+        if (!response.ok) throw new Error(data.error || 'Olivia identity unavailable');
+        if (!cancelled && data.clientCode === CLIENT_CODE) setWidgetIdentity(data.identity);
+      })
+      .catch(() => {
+        if (!cancelled) setWidgetIdentity('');
+      });
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
@@ -70,7 +89,7 @@ export default function OliviaChat() {
       setMessages((current) => [...current, { role: 'assistant', content: text.consentRequired }]);
       return;
     }
-    if (!API_URL) {
+    if (!widgetIdentity) {
       setMessages((current) => [...current, { role: 'assistant', content: text.error }]);
       return;
     }
@@ -83,7 +102,10 @@ export default function OliviaChat() {
     try {
       const response = await fetch(API_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Olivia-Widget-Identity': widgetIdentity,
+        },
         body: JSON.stringify({
           clientCode: CLIENT_CODE,
           visitorId: visitorId.current,
