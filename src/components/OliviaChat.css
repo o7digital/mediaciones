@@ -14,6 +14,10 @@
 .olivia-consent label { display: flex; gap: .5rem; align-items: flex-start; }
 .olivia-consent input { margin-top: .15rem; accent-color: #183b56; }
 .olivia-consent a { color: #183b56; text-decoration: underline; }
+.olivia-lead-form { display: grid; gap: .45rem; padding: .8rem 1rem; border-top: 1px solid #e5ddcf; background: #fffdf8; font-size: .8rem; }
+.olivia-lead-form input, .olivia-lead-form textarea { width: 100%; box-sizing: border-box; border: 1px solid #cfc5b4; border-radius: 7px; padding: .55rem; font: inherit; resize: vertical; }
+.olivia-lead-form button { border: 0; border-radius: 7px; background: #183b56; color: #fff; padding: .65rem; font-weight: 700; cursor: pointer; }
+.olivia-lead-form button:disabled { opacity: .55; cursor: wait; }
 .olivia-form { display: flex; gap: .5rem; padding: .75rem; border-top: 1px solid #e5ddcf; }
 .olivia-form input { min-width: 0; flex: 1; border: 1px solid #cfc5b4; border-radius: 8px; padding: .7rem; font: inherit; }
 .olivia-form button { border: 0; border-radius: 8px; background: #183b56; color: #fff; padding: 0 .9rem; font-weight: 700; cursor: pointer; }

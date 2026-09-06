@@ -22,6 +22,10 @@ const copy = {
     error: 'No pude responder en este momento. Inténtalo de nuevo en unos instantes.',
     consent: 'Acepto el tratamiento de mis datos conforme al Aviso de Privacidad.',
     consentRequired: 'Acepta el Aviso de Privacidad para iniciar la conversación.',
+    leadTitle: 'Déjanos tus datos y te contactaremos.',
+    leadFields: { name: 'Nombre completo', email: 'Correo electrónico', phone: 'Teléfono', details: '¿En qué podemos ayudarte?' },
+    leadSubmit: 'Enviar datos',
+    leadMissing: 'Completa todos los campos para enviar tu solicitud.',
   },
   en: {
     title: 'Olivia AI',
@@ -35,6 +39,10 @@ const copy = {
     error: 'I could not answer right now. Please try again shortly.',
     consent: 'I accept the processing of my data under the Privacy Notice.',
     consentRequired: 'Accept the Privacy Notice to start the conversation.',
+    leadTitle: 'Leave your details and we will contact you.',
+    leadFields: { name: 'Full name', email: 'Email', phone: 'Phone', details: 'How can we help?' },
+    leadSubmit: 'Send details',
+    leadMissing: 'Complete all fields before sending your request.',
   },
 };
 
@@ -46,6 +54,8 @@ export default function OliviaChat() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [widgetIdentity, setWidgetIdentity] = useState('');
+  const [leadForm, setLeadForm] = useState(null);
+  const [leadData, setLeadData] = useState({ name: '', email: '', phone: '', details: '' });
   const [messages, setMessages] = useState([{ role: 'assistant', content: text.welcome }]);
   const visitorId = useRef('');
 
@@ -81,9 +91,9 @@ export default function OliviaChat() {
     try { localStorage.setItem('oliviaPrivacyConsent', 'accepted'); } catch (_) {}
   };
 
-  const sendMessage = async (event) => {
+  const sendMessage = async (event, overrideMessage = '', overrideLead = null) => {
     event.preventDefault();
-    const message = input.trim();
+    const message = (overrideMessage || input).trim();
     if (!message || loading) return;
     if (!accepted) {
       setMessages((current) => [...current, { role: 'assistant', content: text.consentRequired }]);
@@ -118,17 +128,36 @@ export default function OliviaChat() {
             pageTitle: document.title,
             pageContent: document.body.innerText.replace(/\s+/g, ' ').slice(0, 5000),
             dataConsent: true,
+            ...(overrideLead ? { lead: overrideLead } : {}),
           },
         }),
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data.error || 'Olivia request failed');
       setMessages((current) => [...current, { role: 'assistant', content: data.reply || data.message || text.error }]);
+      if (data.action === 'show_lead_form' || data.leadForm) setLeadForm(data.leadForm || {});
     } catch (_) {
       setMessages((current) => [...current, { role: 'assistant', content: text.error }]);
     } finally {
       setLoading(false);
     }
+  };
+
+  const submitLead = (event) => {
+    event.preventDefault();
+    const normalizedLead = Object.fromEntries(
+      Object.entries(leadData).map(([key, value]) => [key, value.trim()]),
+    );
+    if (Object.values(normalizedLead).some((value) => !value)) {
+      setMessages((current) => [...current, { role: 'assistant', content: text.leadMissing }]);
+      return;
+    }
+    setLeadForm(null);
+    sendMessage(
+      event,
+      `Nombre: ${normalizedLead.name}\nEmail: ${normalizedLead.email}\nTelefono: ${normalizedLead.phone}\nNecesidad: ${normalizedLead.details}`,
+      normalizedLead,
+    );
   };
 
   return (
@@ -148,6 +177,16 @@ export default function OliviaChat() {
             ))}
             {loading && <p className="olivia-message assistant">{text.loading}</p>}
           </div>
+          {leadForm && (
+            <form className="olivia-lead-form" onSubmit={submitLead}>
+              <strong>{text.leadTitle}</strong>
+              <input type="text" value={leadData.name} onChange={(event) => setLeadData({ ...leadData, name: event.target.value })} placeholder={text.leadFields.name} aria-label={text.leadFields.name} />
+              <input type="email" value={leadData.email} onChange={(event) => setLeadData({ ...leadData, email: event.target.value })} placeholder={text.leadFields.email} aria-label={text.leadFields.email} />
+              <input type="tel" value={leadData.phone} onChange={(event) => setLeadData({ ...leadData, phone: event.target.value })} placeholder={text.leadFields.phone} aria-label={text.leadFields.phone} />
+              <textarea value={leadData.details} onChange={(event) => setLeadData({ ...leadData, details: event.target.value })} placeholder={text.leadFields.details} aria-label={text.leadFields.details} rows="2" />
+              <button type="submit" disabled={loading}>{text.leadSubmit}</button>
+            </form>
+          )}
           <div className="olivia-consent">
             <label>
               <input type="checkbox" checked={accepted} onChange={(event) => event.target.checked ? acceptConsent() : setAccepted(false)} />
