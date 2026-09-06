@@ -1,0 +1,21 @@
+.olivia-chat { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 1100; font-family: inherit; }
+.olivia-toggle { border: 0; border-radius: 999px; background: #c8aa70; color: #101820; padding: .85rem 1.15rem; font-weight: 700; box-shadow: 0 10px 28px rgba(0,0,0,.3); cursor: pointer; }
+.olivia-toggle:hover { background: #e0c58d; }
+.olivia-panel { display: flex; flex-direction: column; width: min(390px, calc(100vw - 2rem)); height: min(590px, calc(100vh - 6rem)); margin-bottom: .75rem; overflow: hidden; border: 1px solid rgba(200,170,112,.7); border-radius: 18px; background: #fffdf8; color: #20262d; box-shadow: 0 20px 55px rgba(0,0,0,.35); }
+.olivia-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.1rem; background: #101820; color: #fff; }
+.olivia-header strong, .olivia-header span { display: block; }
+.olivia-header span { margin-top: .2rem; color: #d9c28f; font-size: .78rem; }
+.olivia-header button { border: 0; background: transparent; color: #fff; font-size: 1.5rem; cursor: pointer; }
+.olivia-messages { flex: 1; overflow-y: auto; padding: 1rem; background: #f4f0e8; }
+.olivia-message { max-width: 88%; margin: 0 0 .7rem; padding: .7rem .8rem; border-radius: 12px; line-height: 1.45; white-space: pre-wrap; }
+.olivia-message.assistant { background: #fffdf8; border: 1px solid #ddd2bd; }
+.olivia-message.user { margin-left: auto; background: #183b56; color: #fff; }
+.olivia-consent { padding: .7rem 1rem; border-top: 1px solid #e5ddcf; font-size: .75rem; line-height: 1.35; }
+.olivia-consent label { display: flex; gap: .5rem; align-items: flex-start; }
+.olivia-consent input { margin-top: .15rem; accent-color: #183b56; }
+.olivia-consent a { color: #183b56; text-decoration: underline; }
+.olivia-form { display: flex; gap: .5rem; padding: .75rem; border-top: 1px solid #e5ddcf; }
+.olivia-form input { min-width: 0; flex: 1; border: 1px solid #cfc5b4; border-radius: 8px; padding: .7rem; font: inherit; }
+.olivia-form button { border: 0; border-radius: 8px; background: #183b56; color: #fff; padding: 0 .9rem; font-weight: 700; cursor: pointer; }
+.olivia-form button:disabled { opacity: .55; cursor: wait; }
+@media (max-width: 520px) { .olivia-chat { right: .75rem; bottom: .75rem; } .olivia-panel { height: min(570px, calc(100vh - 5rem)); } }

@@ -7,6 +7,7 @@ import Servicios from './components/Servicios';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
+import OliviaChat from './components/OliviaChat';
 import ServicePage from './components/ServicePage';
 import { useLanguage } from './context/LanguageContext';
 import {
@@ -102,7 +103,12 @@ export default function App({ pathname }) {
   }, [lang, pathname]);
 
   if (route.type === 'service') {
-    return <ServicePage route={route} />;
+    return (
+      <>
+        <ServicePage route={route} />
+        <OliviaChat />
+      </>
+    );
   }
 
   return (
@@ -117,6 +123,7 @@ export default function App({ pathname }) {
       </main>
       <Footer route={route} />
       <CookieConsent />
+      <OliviaChat />
     </>
   );
 }
